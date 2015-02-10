@@ -3,6 +3,7 @@
     {
       "name" : "CocoaLumberjack",
       "moduleURL" : "git@github.com:CocoaLumberjack\/CocoaLumberjack.git"
+      "initialBranch" : "master",
     }
   ],
   "dependenciesPath" : "..\/",
