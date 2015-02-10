@@ -2,7 +2,7 @@
   "dependencies" : [
     {
       "name" : "CocoaLumberjack",
-      "moduleURL" : "git@github.com:CocoaLumberjack\/CocoaLumberjack.git"
+      "moduleURL" : "git@github.com:CocoaLumberjack\/CocoaLumberjack.git",
       "initialBranch" : "master",
     }
   ],
