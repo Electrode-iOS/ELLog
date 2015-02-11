@@ -11,16 +11,18 @@ You do not need to clone this repository if you simply want to use Shrubbery
 
 We recommend the following steps to install Shrubbery:
 
+* Install modulo
+	* Check out https://github.com/setdirection/modulo
+	* build
+	* modulo is located in ~/modulo for now
 * In the root directory of your project:
-	* modulo init
+	* ~/modulo init
 	* This creates modulo.spec
-* Change the dependencies path:
-	* edit modulo.spec and change the value of "dependenciesPath" from "dependencies" to "modules"
 * Add Shrubbery to your project:
-	* modulo add git@github.com:TheHolyGrail/Shrubbery.git
+	* ~/modulo add git@github.com:TheHolyGrail/Shrubbery.git
 
 The modulo command will:
 	* Add Shrubbery as a git submodule and check it out into modules/Shrubbery
 	* Add CocoaLumberjack as a git submodule and check it out into modules/CocoaLumberjack
 
-Add the project modules/Shrubbery/THGLog.xcodeproj to a "modules" group within your project.  Do *not* add CocoaLumberJack to your project.
+* Add the project modules/Shrubbery/THGLog.xcodeproj to a "modules" group within your project.  Do *not* add CocoaLumberJack to your project.
