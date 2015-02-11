@@ -20,10 +20,9 @@ We recommend the following steps to install Shrubbery:
 	* This creates modulo.spec
 * Add Shrubbery to your project:
 	* ~/modulo add git@github.com:TheHolyGrail/Shrubbery.git
-
-The modulo command will:
-	* Add Shrubbery as a git submodule and check it out into modules/Shrubbery
-	* Add CocoaLumberjack as a git submodule and check it out into modules/CocoaLumberjack
+	* This command will:
+		* Add Shrubbery as a git submodule and check it out into modules/Shrubbery
+		* Add CocoaLumberjack as a git submodule and check it out into modules/CocoaLumberjack
 
 * Add the project modules/Shrubbery/THGLog.xcodeproj to a "modules" group within your project.  Do *not* add CocoaLumberJack to your project.
 * In your target's Build Phases -> Target Dependencies, add THGLog
