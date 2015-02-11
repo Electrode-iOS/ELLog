@@ -26,3 +26,7 @@ The modulo command will:
 	* Add CocoaLumberjack as a git submodule and check it out into modules/CocoaLumberjack
 
 * Add the project modules/Shrubbery/THGLog.xcodeproj to a "modules" group within your project.  Do *not* add CocoaLumberJack to your project.
+* In your target's Build Phases -> Target Dependencies, add THGLog
+* In your target's Build Phases -> Link Binary With Libraries, add libTHGlog.a
+* In your target's Build Settings -> User Header Search Paths, add modules/Shrubbery
+* You should now be able to #import "THGLog.h" and have it autocomplete
