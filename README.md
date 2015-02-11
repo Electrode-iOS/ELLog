@@ -23,3 +23,4 @@ The modulo command will:
 	* Add Shrubbery as a git submodule and check it out into modules/Shrubbery
 	* Add CocoaLumberjack as a git submodule and check it out into modules/CocoaLumberjack
 
+Add the project modules/Shrubbery/THGLog.xcodeproj to a "modules" group within your project.  Do *not* add CocoaLumberJack to your project.
