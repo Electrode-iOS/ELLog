@@ -1,5 +1,5 @@
 //
-//  WMLog.m
+//  THGLog.m
 //  walmart
 //
 //  Created by Wes Ostler on 2/5/15.
