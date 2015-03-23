@@ -45,5 +45,8 @@ public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtoc
         crashlyticsLog(output, emptyPointer)
     }
 
+    public var showCaller: Bool = true
+    public var showLogLevel: Bool = true
+    public var showTimestamp: Bool = false
 }
 

@@ -40,6 +40,10 @@ public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
 
         NSLog(output)
     }
+
+    public var showCaller: Bool = false
+    public var showLogLevel: Bool = true
+    public var showTimestamp: Bool = false
 }
 
 

@@ -228,7 +228,7 @@ private func loggerDefault() -> Logger {
 }
 
 @objc(THGLogDestinationBase)
-public class LogDestinationBase: LogDestinationProtocol {
+public class LogDestinationBase {
     public init(level: LogLevel) {
         self.level = level.rawValue
     }
@@ -243,10 +243,6 @@ public class LogDestinationBase: LogDestinationProtocol {
 
     public var identifier: String = NSUUID().UUIDString
     public var level: UInt
-
-    public var showCaller: Bool = true
-    public var showLogLevel: Bool = true
-    public var showTimestamp: Bool = false
 
     internal let dateFormatter: NSDateFormatter = NSThread.dateFormatter(dateFormat)
     internal static let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"

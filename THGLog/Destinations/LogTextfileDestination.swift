@@ -68,9 +68,14 @@ public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol 
         outputStream?.write(output)
     }
 
+    public var showCaller: Bool = false
+    public var showLogLevel: Bool = true
+    public var showTimestamp: Bool = true
+
     private let filename: String
     private let outputStream: NSOutputStream?
 }
+
 
 extension NSOutputStream {
 
