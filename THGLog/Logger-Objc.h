@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "THGLog.h"
 
 typedef NS_ENUM(NSUInteger, LogLevel) {
     LogLevelNone = 0,
@@ -18,11 +17,11 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
     LogLevelAll = LogLevelError | LogLevelDebug | LogLevelInfo | LogLevelVerbose
 };
 
+
 @interface LoggerObjc: NSObject
-
 + (void)log:(id)instance logLevel:(NSUInteger)level function:(NSString *)function filename:(NSString *)filename line:(NSUInteger)line format:(NSString *)format, ...;
-
 @end
+
 
 #define THGLogCustom(instance, lvl, frmt, ...) \
     [LoggerObjc log:instance \
