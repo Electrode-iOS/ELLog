@@ -9,12 +9,9 @@
 import Foundation
 
 @objc(THGLogTextfileDestination)
-public class LogTextfileDestination: LogDestinationProtocol {
+public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol {
 
     public init(destFilename: String) {
-        internalIdentifier = NSUUID().UUIDString
-        level = .Debug
-
         filename = destFilename
 
         let folder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
@@ -26,13 +23,15 @@ public class LogTextfileDestination: LogDestinationProtocol {
         } else {
             assertionFailure("LogTestfileDestionation was unable to open \(path) for writing.")
         }
+
+        super.init(level: .Debug)
     }
 
     deinit {
         outputStream?.close()
     }
 
-    public func log(detail: LogDetail) {
+    public override func log(detail: LogDetail) {
 
         if outputStream == nil {
             return
@@ -69,25 +68,8 @@ public class LogTextfileDestination: LogDestinationProtocol {
         outputStream?.write(output)
     }
 
-    public var identifier: String {
-        get {
-            return internalIdentifier
-        }
-    }
-
-    public var level: LogLevel
-
-    public var showCaller: Bool = true
-    public var showLogLevel: Bool = true
-    public var showTimestamp: Bool = false
-
-    private let internalIdentifier: String
     private let filename: String
     private let outputStream: NSOutputStream?
-
-    private let dateFormatter: NSDateFormatter = NSThread.dateFormatter(dateFormat)
-
-    private static let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 }
 
 extension NSOutputStream {

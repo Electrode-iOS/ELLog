@@ -57,7 +57,7 @@ class THGLogTests: XCTestCase {
         //Logger.defaultInstance.removeAllDestionations()
 
         let crashlytics = LogCrashlyticsDestination()
-        crashlytics.level = .Info
+        crashlytics.level = LogLevel.Info.rawValue
 
         Logger.defaultInstance.addDestination(crashlytics)
 

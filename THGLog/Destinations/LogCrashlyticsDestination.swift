@@ -12,14 +12,9 @@ import Foundation
 internal func crashlyticsLog(format: NSString, args: CVaListPointer)
 
 @objc(THGLogCrashlyticsDestination)
-public class LogCrashlyticsDestination: LogDestinationProtocol {
+public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtocol {
 
-    public init() {
-        internalIdentifier = NSUUID().UUIDString
-        level = .Debug
-    }
-
-    public func log(detail: LogDetail) {
+    public override func log(detail: LogDetail) {
         var output: String = ""
 
         if showLogLevel {
@@ -50,21 +45,5 @@ public class LogCrashlyticsDestination: LogDestinationProtocol {
         crashlyticsLog(output, emptyPointer)
     }
 
-    public var identifier: String {
-        get {
-            return internalIdentifier
-        }
-    }
-
-    public var level: LogLevel
-
-    public var showCaller: Bool = true
-    public var showLogLevel: Bool = true
-    public var showTimestamp: Bool = false
-
-    private let internalIdentifier: String
-    private let dateFormatter: NSDateFormatter = NSThread.dateFormatter(dateFormat)
-    
-    private static let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 }
 

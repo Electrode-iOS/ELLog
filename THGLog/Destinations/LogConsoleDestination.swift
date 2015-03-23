@@ -9,14 +9,9 @@
 import Foundation
 
 @objc(THGLogConsoleDestination)
-public class LogConsoleDestination: LogDestinationProtocol {
+public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
 
-    public init() {
-        internalIdentifier = NSUUID().UUIDString
-        level = .Debug
-    }
-
-    public func log(detail: LogDetail) {
+    public override func log(detail: LogDetail) {
         var output: String = ""
 
         if showLogLevel {
@@ -45,23 +40,6 @@ public class LogConsoleDestination: LogDestinationProtocol {
 
         NSLog(output)
     }
-
-    public var identifier: String {
-        get {
-            return internalIdentifier
-        }
-    }
-
-    public var level: LogLevel
-
-    public var showCaller: Bool = true
-    public var showLogLevel: Bool = true
-    public var showTimestamp: Bool = false
-
-    private let internalIdentifier: String
-    private let dateFormatter: NSDateFormatter = NSThread.dateFormatter(dateFormat)
-
-    private static let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 }
 
 
