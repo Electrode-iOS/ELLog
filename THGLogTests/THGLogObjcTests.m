@@ -32,7 +32,7 @@
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");
 
-    Logger *l = nil;
+    //Logger *l = nil;
     THGLog(LogLevelDebug, @"value = %@", @1);
 }
 
