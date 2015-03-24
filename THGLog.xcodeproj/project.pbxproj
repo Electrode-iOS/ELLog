@@ -22,6 +22,7 @@
 		CAB30EFF1AB663C70021C342 /* LogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */; };
 		CAB30F021AB6766C0021C342 /* Logger-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB30F001AB6766C0021C342 /* Logger-Objc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAB30F031AB6766C0021C342 /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* Logger-Objc.m */; };
+		CACE89221AC1CC78000FE30E /* LogDestinationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogConsoleDestination.swift; sourceTree = "<group>"; };
 		CAB30F001AB6766C0021C342 /* Logger-Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Logger-Objc.h"; sourceTree = "<group>"; };
 		CAB30F011AB6766C0021C342 /* Logger-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Logger-Objc.m"; sourceTree = "<group>"; };
+		CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDestinationBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				CAB30EF81AB660F00021C342 /* Logger.swift */,
 				CAB30F001AB6766C0021C342 /* Logger-Objc.h */,
 				CAB30F011AB6766C0021C342 /* Logger-Objc.m */,
+				CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */,
 				CA13BBD21AB894C500165813 /* Extensions */,
 				CAB30EFB1AB6634B0021C342 /* Destinations */,
 				CA8D47BE1AAE6FF50028B74D /* Supporting Files */,
@@ -281,6 +284,7 @@
 				CAB30EFF1AB663C70021C342 /* LogConsoleDestination.swift in Sources */,
 				CA8D47D81AAE702C0028B74D /* Log.swift in Sources */,
 				CA13BC161AB8D35300165813 /* LogCrashlyticsDestination-Objc.m in Sources */,
+				CACE89221AC1CC78000FE30E /* LogDestinationBase.swift in Sources */,
 				CA13BC121AB8A35800165813 /* LogCrashlyticsDestination.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
