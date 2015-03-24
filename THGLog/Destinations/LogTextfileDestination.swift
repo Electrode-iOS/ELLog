@@ -8,6 +8,17 @@
 
 import Foundation
 
+/**
+LogTextfileDestination provides output a user-provided filename that will be
+created in the /Documents directory of your application.
+
+The default behavior is:
+
+    level = .Debug,
+    showCaller = false,
+    showLogLevel = true,
+    showTimestamp = true
+*/
 @objc(THGLogTextfileDestination)
 public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol {
 
@@ -31,7 +42,7 @@ public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol 
         outputStream?.close()
     }
 
-    public override func log(detail: LogDetail) {
+    public func log(detail: LogDetail) {
 
         if outputStream == nil {
             return

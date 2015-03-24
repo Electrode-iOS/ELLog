@@ -8,10 +8,20 @@
 
 import Foundation
 
+/**
+LogConsoleDestination provides output to the console via NSLog. 
+
+The default behavior is:
+
+    level = .Debug,
+    showCaller = false,
+    showLogLevel = true,
+    showTimestamp = false
+*/
 @objc(THGLogConsoleDestination)
 public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
 
-    public override func log(detail: LogDetail) {
+    public func log(detail: LogDetail) {
         var output: String = ""
 
         if showLogLevel {

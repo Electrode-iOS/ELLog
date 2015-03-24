@@ -8,13 +8,25 @@
 
 import Foundation
 
+// This is an example of declaring a C function from ObjC code.
 @asmname("crashlyticsLog")
 internal func crashlyticsLog(format: NSString, args: CVaListPointer)
 
+/**
+LogCrashlyticsDestination provides output the Crashlytics framework.  Crashlytics
+detection is done at runtime and is weakly bound to this class.
+
+The default behavior is:
+
+    level = .Debug,
+    showCaller = true,
+    showLogLevel = true,
+    showTimestamp = false
+*/
 @objc(THGLogCrashlyticsDestination)
 public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtocol {
 
-    public override func log(detail: LogDetail) {
+    public func log(detail: LogDetail) {
         var output: String = ""
 
         if showLogLevel {

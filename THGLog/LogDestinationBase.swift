@@ -52,7 +52,12 @@ public class LogDetail {
     var line: UInt? = nil
 }
 
+/**
+Base class for new destinations.
 
+Provides a default identifier (a GUID), a default level of .Debug, and a date formatter for
+use with output timestamps.
+*/
 @objc(THGLogDestinationBase)
 public class LogDestinationBase {
     public init(level: LogLevel) {
@@ -63,14 +68,9 @@ public class LogDestinationBase {
         level = LogLevel.Debug.rawValue
     }
 
-    public func log(detail: LogDetail) {
-        // do nothing.
-    }
-
     public var identifier: String = NSUUID().UUIDString
     public var level: UInt
 
     internal let dateFormatter: NSDateFormatter = NSThread.dateFormatter(dateFormat)
     internal static let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
-    
 }
