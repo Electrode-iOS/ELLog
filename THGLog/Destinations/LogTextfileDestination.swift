@@ -22,8 +22,8 @@ The default behavior is:
 @objc(THGLogTextfileDestination)
 public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol {
 
-    public init(destFilename: String) {
-        filename = destFilename
+    public init(filename: String) {
+        self.filename = filename
 
         let folder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
         let path = folder.stringByAppendingPathComponent(filename)

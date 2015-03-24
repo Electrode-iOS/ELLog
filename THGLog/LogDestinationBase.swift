@@ -59,12 +59,12 @@ Provides a default identifier (a GUID), a default level of .Debug, and a date fo
 use with output timestamps.
 */
 @objc(THGLogDestinationBase)
-public class LogDestinationBase {
+public class LogDestinationBase: NSObject {
     public init(level: LogLevel) {
         self.level = level.rawValue
     }
 
-    public init() {
+    public override init() {
         level = LogLevel.Debug.rawValue
     }
 

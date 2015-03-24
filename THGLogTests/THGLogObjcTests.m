@@ -32,7 +32,11 @@
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");
 
-    //Logger *l = nil;
+    Logger *l = Logger.defaultInstance;
+    LogTextfileDestination *textfile = [[LogTextfileDestination alloc] initWithFilename:@"blah.txt"];
+    textfile.level = LogLevelError;
+
+    [l addDestination:textfile];
     THGLog(LogLevelDebug, @"value = %@", @1);
 }
 
