@@ -25,14 +25,14 @@ Provides the following functionality:
 A basic out of the box setup, log to .Debug and ultimately to the console:
 
 ```Swift
-log(.Debug, "HEAD KNIGHT: Nee!")
+log(.Debug, "HEAD KNIGHT: Ni!")
 ```
 
 Log to a custom Logger instance:
 ```Swift
 let headKnight = Logger()
 
-headKnight.log(.Debug, "We are the Knights Who Say... Nee!")
+headKnight.log(.Debug, "We are the Knights Who Say... Ni!")
 ```
 
 Configure and use a custom logger instance:
@@ -46,13 +46,13 @@ let shrubbery = LogCrashlyticsDestination(.Error | .Debug)
 headKnight.addDestination(shrubbery)
 
 // this will go to the Crashlytics destination.
-headKnight.log(.Debug, "We are the Knights Who Say... Nee!")
+headKnight.log(.Debug, "We are the Knights Who Say... Ni!")
 
 // this won't go anywhere.  we didn't setup a destination for .Info.
-headKnight.log(.Info, "We are the Knights Who Say... Nee!")
+headKnight.log(.Info, "We are the Knights Who Say... Ni!")
 
 // this will go to the Crashlytics destination as well.
-headKnight.log(.Error, "We are the Knights Who Say... Nee!")
+headKnight.log(.Error, "We are the Knights Who Say... Ni!")
 ```
 
 Customize the Logger's default instance and send a log message:
