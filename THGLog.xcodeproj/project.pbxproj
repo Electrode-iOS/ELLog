@@ -56,6 +56,8 @@
 		CAB30F001AB6766C0021C342 /* Logger-Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Logger-Objc.h"; sourceTree = "<group>"; };
 		CAB30F011AB6766C0021C342 /* Logger-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Logger-Objc.m"; sourceTree = "<group>"; };
 		CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDestinationBase.swift; sourceTree = "<group>"; };
+		CACE89241AC1D432000FE30E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CACE89251AC1D432000FE30E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,8 @@
 		CA8D47B11AAE6FF50028B74D = {
 			isa = PBXGroup;
 			children = (
+				CACE89241AC1D432000FE30E /* LICENSE */,
+				CACE89251AC1D432000FE30E /* README.md */,
 				CA8D47BD1AAE6FF50028B74D /* THGLog */,
 				CA8D47CA1AAE6FF50028B74D /* THGLogTests */,
 				CA8D47BC1AAE6FF50028B74D /* Products */,
