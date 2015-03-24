@@ -9,7 +9,7 @@
 import Foundation
 
 /**
-LogLevel option flags.
+Logging Level option flags.
 */
 public struct LogLevel: RawOptionSetType, BooleanType, DebugPrintable {
     /// Logging disabled.
@@ -68,7 +68,11 @@ public struct LogLevel: RawOptionSetType, BooleanType, DebugPrintable {
 
 }
 
+/**
+Logger class.
 
+Logs messages to the added destinations based on LogLevel flags.
+*/
 @objc(THGLogger)
 public final class Logger: NSObject {
 
@@ -81,8 +85,7 @@ public final class Logger: NSObject {
     Dispatches the provided log information to the logging destination.
     */
     public func log(level: LogLevel, message: String, function: String = __FUNCTION__, filename: String = __FILE__, line: UInt = __LINE__) {
-        var detail = LogDetail()
-
+        let detail = LogDetail()
         detail.date = NSDate()
         detail.message = message
         detail.level = level.rawValue
@@ -140,8 +143,7 @@ public final class Logger: NSObject {
 
         let message = curriedStringWithFormat(valist)
 
-        var detail = LogDetail()
-
+        let detail = LogDetail()
         detail.date = NSDate()
         detail.message = message
         detail.level = level
