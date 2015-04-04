@@ -181,7 +181,7 @@ public final class Logger: NSObject {
 /// Private convenience method for instantiating the default logging scheme.
 private func loggerDefault() -> Logger {
     let logger = Logger()
-    let console = LogConsoleDestination(level: .Debug)
+    let console = LogConsoleDestination(level: .Debug | .Error)
     logger.addDestination(console)
     return logger
 }
