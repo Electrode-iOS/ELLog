@@ -133,7 +133,7 @@ public final class Logger: NSObject {
     /**
     Don't call this.  This is purely for interacting with the objective-c interface to this class.
     */
-    public func _objcLog(level: UInt, function: String, filename: String, line: UInt, format: String, args: UnsafeMutablePointer<va_list>) {
+    public func _objcLog(level: UInt, function: String, filename: String, line: UInt, format: String, args: UnsafeMutablePointer<__darwin_va_list>) {
         let valist = CVaListPointer(_fromUnsafeMutablePointer: args)
 
         func curriedStringWithFormat(valist: CVaListPointer) -> String {
