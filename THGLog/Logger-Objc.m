@@ -15,11 +15,11 @@
     va_list argp;
     va_start(argp, format);
 
-    // I think there's a swift bug here.  I should pass "&argp", it works on sim, but not on device.
-    // Passing "(va_list *)argp" works on both.  You'd figure it *wouldn't* work on sim given the above.
-    // Typecasting it to va_list* silences the incompatible pointer type warning you'd normally get here. :(
-    [instance _objcLog:level function:function filename:filename line:line format:format args:(va_list *)argp];
+    NSString *message = [[NSString alloc] initWithFormat:format arguments:argp];
+
     va_end(argp);
+
+    [instance _objcLog:level function:function filename:filename line:line message: message];
 }
 
 @end
