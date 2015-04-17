@@ -1,22 +1,19 @@
 //
-//  THGLogObjcTests.m
-//  THGLog
+//  THGLogSampleObjcTests.m
+//  THGLogSampleObjcTests
 //
-//  Created by Brandon Sneed on 3/9/15.
+//  Created by Brandon Sneed on 4/17/15.
 //  Copyright (c) 2015 TheHolyGrail. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-@import THGLog;
-@import Crashlytics;
 
-
-@interface THGLogObjcTests : XCTestCase
+@interface THGLogSampleObjcTests : XCTestCase
 
 @end
 
-@implementation THGLogObjcTests
+@implementation THGLogSampleObjcTests
 
 - (void)setUp {
     [super setUp];
@@ -31,13 +28,6 @@
 - (void)testExample {
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");
-
-    Logger *l = Logger.defaultInstance;
-    LogTextfileDestination *textfile = [[LogTextfileDestination alloc] initWithFilename:@"blah.txt"];
-    textfile.level = LogLevelError;
-
-    [l addDestination:textfile];
-    THGLog(LogLevelDebug, @"value = %@, do you like it?  %@", @1, @"Yayusss...");
 }
 
 - (void)testPerformanceExample {
