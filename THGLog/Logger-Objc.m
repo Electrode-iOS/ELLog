@@ -7,7 +7,10 @@
 //
 
 #import "Logger-Objc.h"
+
+#ifdef THGLOGPRODUCT
 #import <THGLog/THGLog-Swift.h>
+#endif
 
 @implementation LoggerObjc
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48A4A6E71B026E2F00DC86EF /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A4A6E61B026E2F00DC86EF /* Logger-Objc.m */; };
 		CA13BBD11AB8946400165813 /* LogTextfileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */; };
 		CA13BBD41AB894D700165813 /* NSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread.swift */; };
 		CA13BC121AB8A35800165813 /* LogCrashlyticsDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BC111AB8A35800165813 /* LogCrashlyticsDestination.swift */; };
@@ -15,7 +16,6 @@
 		CA2410511AF966F600AA4410 /* NSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread.swift */; };
 		CA2410521AF966F600AA4410 /* LogTextfileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */; };
 		CA2410531AF966F600AA4410 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EF81AB660F00021C342 /* Logger.swift */; };
-		CA2410541AF966F600AA4410 /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* Logger-Objc.m */; };
 		CA2410551AF966F600AA4410 /* LogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */; };
 		CA2410561AF966F600AA4410 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8D47D71AAE702C0028B74D /* Log.swift */; };
 		CA2410571AF966F600AA4410 /* LogCrashlyticsDestination-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13BC141AB8D35300165813 /* LogCrashlyticsDestination-Objc.m */; };
@@ -33,7 +33,7 @@
 		CAB30EF91AB660F00021C342 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EF81AB660F00021C342 /* Logger.swift */; };
 		CAB30EFF1AB663C70021C342 /* LogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */; };
 		CAB30F021AB6766C0021C342 /* Logger-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB30F001AB6766C0021C342 /* Logger-Objc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CAB30F031AB6766C0021C342 /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* Logger-Objc.m */; };
+		CAB30F031AB6766C0021C342 /* THGLog copy-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* THGLog copy-Info.plist */; };
 		CACE89221AC1CC78000FE30E /* LogDestinationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,13 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48A4A6E61B026E2F00DC86EF /* Logger-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Logger-Objc.m"; sourceTree = "<group>"; };
 		CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTextfileDestination.swift; sourceTree = "<group>"; };
 		CA13BBD31AB894D700165813 /* NSThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSThread.swift; sourceTree = "<group>"; };
 		CA13BC111AB8A35800165813 /* LogCrashlyticsDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCrashlyticsDestination.swift; sourceTree = "<group>"; };
 		CA13BC131AB8D35300165813 /* LogCrashlyticsDestination-Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LogCrashlyticsDestination-Objc.h"; sourceTree = "<group>"; };
 		CA13BC141AB8D35300165813 /* LogCrashlyticsDestination-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LogCrashlyticsDestination-Objc.m"; sourceTree = "<group>"; };
 		CA2410631AF966F600AA4410 /* THGLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THGLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA2410641AF966F600AA4410 /* THGLog copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "THGLog copy-Info.plist"; path = "/Users/brandon/work/Libraries/Shrubbery/THGLog copy-Info.plist"; sourceTree = "<absolute>"; };
+		CA2410641AF966F600AA4410 /* THGLog copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "THGLog copy-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CA6BBA451AB9F10600A45A82 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CA8332C01AAEC738003C9058 /* THGLogTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THGLogTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA8332C11AAEC739003C9058 /* THGLogObjcTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THGLogObjcTests.m; sourceTree = "<group>"; };
@@ -68,7 +69,7 @@
 		CAB30EF81AB660F00021C342 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogConsoleDestination.swift; sourceTree = "<group>"; };
 		CAB30F001AB6766C0021C342 /* Logger-Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Logger-Objc.h"; sourceTree = "<group>"; };
-		CAB30F011AB6766C0021C342 /* Logger-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Logger-Objc.m"; sourceTree = "<group>"; };
+		CAB30F011AB6766C0021C342 /* THGLog copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "THGLog copy-Info.plist"; path = "../THGLog copy-Info.plist"; sourceTree = "<group>"; };
 		CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDestinationBase.swift; sourceTree = "<group>"; };
 		CACE89241AC1D432000FE30E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CACE89251AC1D432000FE30E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 				CA8D47BD1AAE6FF50028B74D /* THGLog */,
 				CA8D47CA1AAE6FF50028B74D /* THGLogTests */,
 				CA8D47BC1AAE6FF50028B74D /* Products */,
-				CA2410641AF966F600AA4410 /* THGLog copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,7 +146,8 @@
 				CA8D47D71AAE702C0028B74D /* Log.swift */,
 				CAB30EF81AB660F00021C342 /* Logger.swift */,
 				CAB30F001AB6766C0021C342 /* Logger-Objc.h */,
-				CAB30F011AB6766C0021C342 /* Logger-Objc.m */,
+				48A4A6E61B026E2F00DC86EF /* Logger-Objc.m */,
+				CAB30F011AB6766C0021C342 /* THGLog copy-Info.plist */,
 				CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */,
 				CA13BBD21AB894C500165813 /* Extensions */,
 				CAB30EFB1AB6634B0021C342 /* Destinations */,
@@ -158,6 +159,7 @@
 		CA8D47BE1AAE6FF50028B74D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA2410641AF966F600AA4410 /* THGLog copy-Info.plist */,
 				CA8D47BF1AAE6FF50028B74D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -344,7 +346,6 @@
 				CA2410511AF966F600AA4410 /* NSThread.swift in Sources */,
 				CA2410521AF966F600AA4410 /* LogTextfileDestination.swift in Sources */,
 				CA2410531AF966F600AA4410 /* Logger.swift in Sources */,
-				CA2410541AF966F600AA4410 /* Logger-Objc.m in Sources */,
 				CA2410551AF966F600AA4410 /* LogConsoleDestination.swift in Sources */,
 				CA2410561AF966F600AA4410 /* Log.swift in Sources */,
 				CA2410571AF966F600AA4410 /* LogCrashlyticsDestination-Objc.m in Sources */,
@@ -360,8 +361,9 @@
 				CA13BBD41AB894D700165813 /* NSThread.swift in Sources */,
 				CA13BBD11AB8946400165813 /* LogTextfileDestination.swift in Sources */,
 				CAB30EF91AB660F00021C342 /* Logger.swift in Sources */,
-				CAB30F031AB6766C0021C342 /* Logger-Objc.m in Sources */,
+				CAB30F031AB6766C0021C342 /* THGLog copy-Info.plist in Sources */,
 				CAB30EFF1AB663C70021C342 /* LogConsoleDestination.swift in Sources */,
+				48A4A6E71B026E2F00DC86EF /* Logger-Objc.m in Sources */,
 				CA8D47D81AAE702C0028B74D /* Log.swift in Sources */,
 				CA13BC161AB8D35300165813 /* LogCrashlyticsDestination-Objc.m in Sources */,
 				CACE89221AC1CC78000FE30E /* LogDestinationBase.swift in Sources */,
@@ -543,6 +545,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/THGLog",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"THGLOGPRODUCT=1",
+				);
 				INFOPLIST_FILE = THGLog/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -568,6 +575,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/THGLog",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = "THGLOGPRODUCT=1";
 				INFOPLIST_FILE = THGLog/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
