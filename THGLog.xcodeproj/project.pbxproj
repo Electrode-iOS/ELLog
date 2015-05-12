@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48A4A6E71B026E2F00DC86EF /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A4A6E61B026E2F00DC86EF /* Logger-Objc.m */; };
 		CA13BBD11AB8946400165813 /* LogTextfileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */; };
 		CA13BBD41AB894D700165813 /* NSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread.swift */; };
 		CA13BC121AB8A35800165813 /* LogCrashlyticsDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BC111AB8A35800165813 /* LogCrashlyticsDestination.swift */; };
 		CA13BC151AB8D35300165813 /* LogCrashlyticsDestination-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CA13BC131AB8D35300165813 /* LogCrashlyticsDestination-Objc.h */; };
 		CA13BC161AB8D35300165813 /* LogCrashlyticsDestination-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13BC141AB8D35300165813 /* LogCrashlyticsDestination-Objc.m */; };
+		CA2410511AF966F600AA4410 /* NSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread.swift */; };
+		CA2410521AF966F600AA4410 /* LogTextfileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */; };
+		CA2410531AF966F600AA4410 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EF81AB660F00021C342 /* Logger.swift */; };
+		CA2410551AF966F600AA4410 /* LogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */; };
+		CA2410561AF966F600AA4410 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8D47D71AAE702C0028B74D /* Log.swift */; };
+		CA2410571AF966F600AA4410 /* LogCrashlyticsDestination-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13BC141AB8D35300165813 /* LogCrashlyticsDestination-Objc.m */; };
+		CA2410581AF966F600AA4410 /* LogDestinationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */; };
+		CA2410591AF966F600AA4410 /* LogCrashlyticsDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BC111AB8A35800165813 /* LogCrashlyticsDestination.swift */; };
+		CA24105C1AF966F600AA4410 /* Logger-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB30F001AB6766C0021C342 /* Logger-Objc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA24105D1AF966F600AA4410 /* THGLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CA8D47C01AAE6FF50028B74D /* THGLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA24105E1AF966F600AA4410 /* LogCrashlyticsDestination-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CA13BC131AB8D35300165813 /* LogCrashlyticsDestination-Objc.h */; };
 		CA6BBA461AB9F10600A45A82 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6BBA451AB9F10600A45A82 /* Crashlytics.framework */; };
 		CA8332C21AAEC739003C9058 /* THGLogObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8332C11AAEC739003C9058 /* THGLogObjcTests.m */; };
 		CA8D47C11AAE6FF50028B74D /* THGLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CA8D47C01AAE6FF50028B74D /* THGLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,7 +33,7 @@
 		CAB30EF91AB660F00021C342 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EF81AB660F00021C342 /* Logger.swift */; };
 		CAB30EFF1AB663C70021C342 /* LogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */; };
 		CAB30F021AB6766C0021C342 /* Logger-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB30F001AB6766C0021C342 /* Logger-Objc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CAB30F031AB6766C0021C342 /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* Logger-Objc.m */; };
+		CAB30F031AB6766C0021C342 /* THGLog copy-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* THGLog copy-Info.plist */; };
 		CACE89221AC1CC78000FE30E /* LogDestinationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,11 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48A4A6E61B026E2F00DC86EF /* Logger-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Logger-Objc.m"; sourceTree = "<group>"; };
 		CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTextfileDestination.swift; sourceTree = "<group>"; };
 		CA13BBD31AB894D700165813 /* NSThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSThread.swift; sourceTree = "<group>"; };
 		CA13BC111AB8A35800165813 /* LogCrashlyticsDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCrashlyticsDestination.swift; sourceTree = "<group>"; };
 		CA13BC131AB8D35300165813 /* LogCrashlyticsDestination-Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LogCrashlyticsDestination-Objc.h"; sourceTree = "<group>"; };
 		CA13BC141AB8D35300165813 /* LogCrashlyticsDestination-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LogCrashlyticsDestination-Objc.m"; sourceTree = "<group>"; };
+		CA2410631AF966F600AA4410 /* THGLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THGLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2410641AF966F600AA4410 /* THGLog copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "THGLog copy-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CA6BBA451AB9F10600A45A82 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CA8332C01AAEC738003C9058 /* THGLogTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THGLogTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA8332C11AAEC739003C9058 /* THGLogObjcTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THGLogObjcTests.m; sourceTree = "<group>"; };
@@ -54,13 +69,20 @@
 		CAB30EF81AB660F00021C342 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogConsoleDestination.swift; sourceTree = "<group>"; };
 		CAB30F001AB6766C0021C342 /* Logger-Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Logger-Objc.h"; sourceTree = "<group>"; };
-		CAB30F011AB6766C0021C342 /* Logger-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Logger-Objc.m"; sourceTree = "<group>"; };
+		CAB30F011AB6766C0021C342 /* THGLog copy-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "THGLog copy-Info.plist"; path = "../THGLog copy-Info.plist"; sourceTree = "<group>"; };
 		CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDestinationBase.swift; sourceTree = "<group>"; };
 		CACE89241AC1D432000FE30E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CACE89251AC1D432000FE30E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA24105A1AF966F600AA4410 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA8D47B71AAE6FF50028B74D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,6 +134,7 @@
 			children = (
 				CA8D47BB1AAE6FF50028B74D /* THGLog.framework */,
 				CA8D47C61AAE6FF50028B74D /* THGLogTests.xctest */,
+				CA2410631AF966F600AA4410 /* THGLog.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,7 +146,8 @@
 				CA8D47D71AAE702C0028B74D /* Log.swift */,
 				CAB30EF81AB660F00021C342 /* Logger.swift */,
 				CAB30F001AB6766C0021C342 /* Logger-Objc.h */,
-				CAB30F011AB6766C0021C342 /* Logger-Objc.m */,
+				48A4A6E61B026E2F00DC86EF /* Logger-Objc.m */,
+				CAB30F011AB6766C0021C342 /* THGLog copy-Info.plist */,
 				CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */,
 				CA13BBD21AB894C500165813 /* Extensions */,
 				CAB30EFB1AB6634B0021C342 /* Destinations */,
@@ -135,6 +159,7 @@
 		CA8D47BE1AAE6FF50028B74D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA2410641AF966F600AA4410 /* THGLog copy-Info.plist */,
 				CA8D47BF1AAE6FF50028B74D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -175,6 +200,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		CA24105B1AF966F600AA4410 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA24105C1AF966F600AA4410 /* Logger-Objc.h in Headers */,
+				CA24105D1AF966F600AA4410 /* THGLog.h in Headers */,
+				CA24105E1AF966F600AA4410 /* LogCrashlyticsDestination-Objc.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA8D47B81AAE6FF50028B74D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +223,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		CA24104F1AF966F600AA4410 /* THGLog_osx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA2410601AF966F600AA4410 /* Build configuration list for PBXNativeTarget "THGLog_osx" */;
+			buildPhases = (
+				CA2410501AF966F600AA4410 /* Sources */,
+				CA24105A1AF966F600AA4410 /* Frameworks */,
+				CA24105B1AF966F600AA4410 /* Headers */,
+				CA24105F1AF966F600AA4410 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = THGLog_osx;
+			productName = THGLog;
+			productReference = CA2410631AF966F600AA4410 /* THGLog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		CA8D47BA1AAE6FF50028B74D /* THGLog */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA8D47D11AAE6FF50028B74D /* Build configuration list for PBXNativeTarget "THGLog" */;
@@ -235,6 +288,7 @@
 				TargetAttributes = {
 					CA8D47BA1AAE6FF50028B74D = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = DXZ5VF8836;
 					};
 					CA8D47C51AAE6FF50028B74D = {
 						CreatedOnToolsVersion = 6.3;
@@ -255,11 +309,19 @@
 			targets = (
 				CA8D47BA1AAE6FF50028B74D /* THGLog */,
 				CA8D47C51AAE6FF50028B74D /* THGLogTests */,
+				CA24104F1AF966F600AA4410 /* THGLog_osx */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA24105F1AF966F600AA4410 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA8D47B91AAE6FF50028B74D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +339,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA2410501AF966F600AA4410 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA2410511AF966F600AA4410 /* NSThread.swift in Sources */,
+				CA2410521AF966F600AA4410 /* LogTextfileDestination.swift in Sources */,
+				CA2410531AF966F600AA4410 /* Logger.swift in Sources */,
+				CA2410551AF966F600AA4410 /* LogConsoleDestination.swift in Sources */,
+				CA2410561AF966F600AA4410 /* Log.swift in Sources */,
+				CA2410571AF966F600AA4410 /* LogCrashlyticsDestination-Objc.m in Sources */,
+				CA2410581AF966F600AA4410 /* LogDestinationBase.swift in Sources */,
+				CA2410591AF966F600AA4410 /* LogCrashlyticsDestination.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA8D47B61AAE6FF50028B74D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,8 +361,9 @@
 				CA13BBD41AB894D700165813 /* NSThread.swift in Sources */,
 				CA13BBD11AB8946400165813 /* LogTextfileDestination.swift in Sources */,
 				CAB30EF91AB660F00021C342 /* Logger.swift in Sources */,
-				CAB30F031AB6766C0021C342 /* Logger-Objc.m in Sources */,
+				CAB30F031AB6766C0021C342 /* THGLog copy-Info.plist in Sources */,
 				CAB30EFF1AB663C70021C342 /* LogConsoleDestination.swift in Sources */,
+				48A4A6E71B026E2F00DC86EF /* Logger-Objc.m in Sources */,
 				CA8D47D81AAE702C0028B74D /* Log.swift in Sources */,
 				CA13BC161AB8D35300165813 /* LogCrashlyticsDestination-Objc.m in Sources */,
 				CACE89221AC1CC78000FE30E /* LogDestinationBase.swift in Sources */,
@@ -313,6 +391,57 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CA2410611AF966F600AA4410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/THGLog",
+				);
+				INFOPLIST_FILE = "THGLog copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_MODULE_NAME = THGLog;
+				PRODUCT_NAME = THGLog;
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA2410621AF966F600AA4410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/THGLog",
+				);
+				INFOPLIST_FILE = "THGLog copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_MODULE_NAME = THGLog;
+				PRODUCT_NAME = THGLog;
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		CA8D47CF1AAE6FF50028B74D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -350,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -392,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,6 +535,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -414,10 +545,17 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/THGLog",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"THGLOGPRODUCT=1",
+				);
 				INFOPLIST_FILE = THGLog/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -427,6 +565,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -435,10 +575,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/THGLog",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = "THGLOGPRODUCT=1";
 				INFOPLIST_FILE = THGLog/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -485,6 +628,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA2410601AF966F600AA4410 /* Build configuration list for PBXNativeTarget "THGLog_osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA2410611AF966F600AA4410 /* Debug */,
+				CA2410621AF966F600AA4410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA8D47B51AAE6FF50028B74D /* Build configuration list for PBXProject "THGLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

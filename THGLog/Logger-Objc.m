@@ -7,15 +7,22 @@
 //
 
 #import "Logger-Objc.h"
+
+#ifdef THGLOGPRODUCT
 #import <THGLog/THGLog-Swift.h>
+#endif
 
 @implementation LoggerObjc
 
 + (void)log:(Logger *)instance logLevel:(NSUInteger)level function:(NSString *)function filename:(NSString *)filename line:(NSUInteger)line format:(NSString *)format, ... {
     va_list argp;
     va_start(argp, format);
-    [instance _objcLog:level function:function filename:filename line:line format:format args:&argp];
+
+    NSString *message = [[NSString alloc] initWithFormat:format arguments:argp];
+
     va_end(argp);
+
+    [instance _objcLog:level function:function filename:filename line:line message: message];
 }
 
 @end

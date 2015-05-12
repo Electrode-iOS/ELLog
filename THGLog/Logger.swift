@@ -133,16 +133,7 @@ public final class Logger: NSObject {
     /**
     Don't call this.  This is purely for interacting with the objective-c interface to this class.
     */
-    public func _objcLog(level: UInt, function: String, filename: String, line: UInt, format: String, args: UnsafeMutablePointer<va_list>) {
-        let valist = CVaListPointer(_fromUnsafeMutablePointer: args)
-
-        func curriedStringWithFormat(valist: CVaListPointer) -> String {
-            let output = NSString(format: format, arguments: valist)
-            return output as String
-        }
-
-        let message = curriedStringWithFormat(valist)
-
+    public func _objcLog(level: UInt, function: String, filename: String, line: UInt, message: String) {
         let detail = LogDetail()
         detail.date = NSDate()
         detail.message = message
@@ -152,7 +143,6 @@ public final class Logger: NSObject {
         detail.line = line
 
         log(detail)
-
     }
 
     private func log(detail: LogDetail) {
@@ -181,7 +171,7 @@ public final class Logger: NSObject {
 /// Private convenience method for instantiating the default logging scheme.
 private func loggerDefault() -> Logger {
     let logger = Logger()
-    let console = LogConsoleDestination(level: .Debug)
+    let console = LogConsoleDestination(level: .Debug | .Error)
     logger.addDestination(console)
     return logger
 }
