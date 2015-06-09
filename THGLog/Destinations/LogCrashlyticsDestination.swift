@@ -54,7 +54,7 @@ public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtoc
         }
 
         let emptyPointer = CVaListPointer(_fromUnsafeMutablePointer: nil)
-        crashlyticsLog(output, emptyPointer)
+        crashlyticsLog(output, args: emptyPointer)
     }
 
     public var showCaller: Bool = true

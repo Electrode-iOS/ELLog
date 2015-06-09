@@ -11,7 +11,7 @@ import XCTest
 import THGLog
 import Crashlytics
 
-public enum TestEnum: Printable {
+public enum TestEnum: CustomStringConvertible {
     case One
     case Two
     case Three

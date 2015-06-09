@@ -25,7 +25,7 @@ public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol 
     public init(filename: String) {
         self.filename = filename
 
-        let folder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        let folder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] 
         let path = folder.stringByAppendingPathComponent(filename)
         outputStream = NSOutputStream(toFileAtPath: path, append: true)
 

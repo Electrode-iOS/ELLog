@@ -15,7 +15,7 @@ public protocol LogDestinationProtocol: class {
     /**
     Sent to the destination when a log statement is executed.
 
-    :param: detail Detailed information about the log statement.
+    - parameter detail: Detailed information about the log statement.
     */
     func log(detail: LogDetail)
     /**

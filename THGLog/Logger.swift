@@ -11,7 +11,7 @@ import Foundation
 /**
 Logging Level option flags.
 */
-public struct LogLevel: RawOptionSetType, BooleanType, DebugPrintable {
+public struct LogLevel: RawOptionSetType, BooleanType, CustomDebugStringConvertible {
     /// Logging disabled.
     public static var None: LogLevel       { return self(rawValue: 0) }
     /// Error logging enabled.
@@ -23,7 +23,7 @@ public struct LogLevel: RawOptionSetType, BooleanType, DebugPrintable {
     /// Verbose logging enabled.
     public static var Verbose: LogLevel    { return self(rawValue: 1 << 3) }
     /// All logging enabled.
-    public static var All: LogLevel        { return .Error | .Debug | .Info | .Verbose }
+    public static var All: [LogLevel]      { return [.Error, .Debug, .Info, .Verbose] }
 
     /// Returns a string representation of the current logging level(s).
     public var debugDescription: String {
@@ -34,10 +34,11 @@ public struct LogLevel: RawOptionSetType, BooleanType, DebugPrintable {
         if level == .None {
             return "NONE"
         }
-
-        if level == .All {
-            return "ALL"
-        }
+        
+        // FIXME: return proper debug description for All
+//        if level == LogLevel.All {
+//            return "ALL"
+//        }
 
         if level & .Error {
             options.append("ERROR")
@@ -101,8 +102,8 @@ public final class Logger: NSObject {
     to the list.  Only messages with a log level matching what this destination consumes
     will be sent here.
     
-    :param: destination The destination to add.
-    :returns: the identifier of the destination.  Useful for later lookup.
+    - parameter destination: The destination to add.
+    - returns: the identifier of the destination.  Useful for later lookup.
     */
     public func addDestination(destination: LogDestinationProtocol) -> String {
         destinations[destination.identifier] = destination
