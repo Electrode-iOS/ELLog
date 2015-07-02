@@ -11,62 +11,62 @@ import Foundation
 /**
 Logging Level option flags.
 */
-public struct LogLevel: RawOptionSetType, BooleanType, CustomDebugStringConvertible {
+public struct LogLevel: OptionSetType, BooleanType, CustomDebugStringConvertible {
     /// Logging disabled.
-    public static var None: LogLevel       { return self(rawValue: 0) }
+    public let rawValue: UInt
+    
+    public static let None = LogLevel(rawValue: 0)
+    
     /// Error logging enabled.
-    public static var Error: LogLevel      { return self(rawValue: 1 << 0) }
+    public static let Error = LogLevel(rawValue: 1 << 0)
+    
     /// Debug logging enabled.
-    public static var Debug: LogLevel      { return self(rawValue: 1 << 1) }
+    public static let Debug = LogLevel(rawValue: 1 << 1)
+    
     /// Info logging enabled.
-    public static var Info: LogLevel       { return self(rawValue: 1 << 2) }
+    public static let Info = LogLevel(rawValue: 1 << 2)
+    
     /// Verbose logging enabled.
-    public static var Verbose: LogLevel    { return self(rawValue: 1 << 3) }
+    public static let Verbose = LogLevel(rawValue: 1 << 3)
+    
     /// All logging enabled.
-    public static var All: [LogLevel]      { return [.Error, .Debug, .Info, .Verbose] }
+    public static let All:LogLevel = [.Error, .Debug, .Info, .Verbose]
 
     /// Returns a string representation of the current logging level(s).
     public var debugDescription: String {
         var options: Array<String> = []
 
-        let level = LogLevel(rawValue: value)
-
-        if level == .None {
+        if self == .None {
             return "NONE"
         }
         
-        // FIXME: return proper debug description for All
-//        if level == LogLevel.All {
-//            return "ALL"
-//        }
-
-        if level & .Error {
+        if contains(LogLevel.All) {
+            return "ALL"
+        }
+        
+        if contains(.Error) {
             options.append("ERROR")
         }
 
-        if level & .Debug {
+        if contains(.Debug) {
             options.append("DEBUG")
         }
 
-        if level & .Info {
+        if contains(.Info) {
             options.append("INFO")
         }
 
-        if level & .Verbose {
+        if contains(.Verbose) {
             options.append("VERBOSE")
         }
 
         return ", ".join(options)
     }
 
-    // It's unlikely that you need to refer to these directly.
-    private var value: UInt = 0
-    public init(nilLiteral: ()) {}
-    public init(rawValue: UInt) { value = rawValue }
-    public var boolValue: Bool { return value != 0 }
-    public var rawValue: UInt { return value }
-    public static var allZeros: LogLevel { return self(rawValue: 0) }
-
+    public init(rawValue: UInt) { self.rawValue = rawValue }
+    
+    // BooleanType
+    public var boolValue: Bool { return rawValue  != 0 }
 }
 
 /**
@@ -152,13 +152,13 @@ public final class Logger: NSObject {
                 let level: LogLevel = LogLevel(rawValue: rawLevel)
                 let destinationLevel: LogLevel = LogLevel(rawValue: destination.level)
 
-                if (level & .Error) && (destinationLevel & .Error) {
+                if level.contains(.Error) && destinationLevel.contains(.Error) {
                     destination.log(detail)
-                } else if (level & .Debug) && (destinationLevel & .Debug) {
+                } else if level.contains(.Debug) && destinationLevel.contains(.Debug) {
                     destination.log(detail)
-                } else if (level & .Info) && (destinationLevel & .Info) {
+                } else if level.contains(.Info) && destinationLevel.contains(.Info) {
                     destination.log(detail)
-                } else if (level & .Verbose) && (destinationLevel & .Verbose) {
+                } else if level.contains(.Verbose) && destinationLevel.contains(.Verbose) {
                     destination.log(detail)
                 }
             }
@@ -172,7 +172,7 @@ public final class Logger: NSObject {
 /// Private convenience method for instantiating the default logging scheme.
 private func loggerDefault() -> Logger {
     let logger = Logger()
-    let console = LogConsoleDestination(level: .Debug | .Error)
+    let console = LogConsoleDestination(level: [.Debug, .Error])
     logger.addDestination(console)
     return logger
 }
