@@ -288,7 +288,6 @@
 				TargetAttributes = {
 					CA8D47BA1AAE6FF50028B74D = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = DXZ5VF8836;
 					};
 					CA8D47C51AAE6FF50028B74D = {
 						CreatedOnToolsVersion = 6.3;
