@@ -37,7 +37,7 @@ public protocol LogDestinationProtocol: class {
 
 /// A struct describing a log message in detail.
 @objc(THGLogDetail)
-public class LogDetail {
+public class LogDetail: NSObject {
     /// The date at which the log call was made.  Note: This will never be an exact time, but approximate.
     var date: NSDate? = nil
     /// The message.
@@ -58,7 +58,8 @@ Base class for new destinations.
 Provides a default identifier (a GUID), a default level of .Debug, and a date formatter for
 use with output timestamps.
 */
-@objc(THGLogDestinationBase)
+//@objc(THGLogDestinationBase)
+@objc
 public class LogDestinationBase: NSObject {
     public init(level: LogLevel) {
         self.level = level.rawValue

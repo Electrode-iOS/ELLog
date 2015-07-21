@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
              format:frmt, ## __VA_ARGS__]
 
 #define THGLog(lvl, frmt, ...) \
-    THGLogCustom(Logger.defaultInstance, lvl, frmt, ## __VA_ARGS__)
+    THGLogCustom(THGLogger.defaultInstance, lvl, frmt, ## __VA_ARGS__)
 
 #define THGLogError(frmt, ...) \
     THGLog(LogLevelError, frmt, ## __VA_ARGS__)
