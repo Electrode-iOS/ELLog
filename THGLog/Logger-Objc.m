@@ -10,6 +10,11 @@
 
 #ifdef THGLOGPRODUCT
 #import <THGLog/THGLog-Swift.h>
+#else
+/// !!!: DO NOT MERGE THIS INTO THG Shrubbery. This is a temporary fix that will
+/// live on wmusiphone repository until we're building from modules.
+/// Again, DO NOT MERGE THIS INTO THE MAIN FORK
+#import "Walmart-Swift.h"
 #endif
 
 @implementation LoggerObjc
