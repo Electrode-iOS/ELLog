@@ -43,7 +43,7 @@ public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtoc
 
         if showCaller {
             if let filename = detail.filename, line = detail.line, function = detail.function {
-                output += "(\(function), \(filename.lastPathComponent):\(line)) "
+                output += "(\(function), \((filename as NSString).lastPathComponent):\(line)) "
             }
         }
 
