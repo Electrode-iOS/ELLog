@@ -26,7 +26,7 @@ public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol 
         self.filename = filename
 
         let folder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] 
-        let path = folder.stringByAppendingPathComponent(filename)
+        let path = (folder as NSString).stringByAppendingPathComponent(filename)
         outputStream = NSOutputStream(toFileAtPath: path, append: true)
 
         if let outputStream = outputStream {
@@ -64,7 +64,7 @@ public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol 
 
         if showCaller {
             if let filename = detail.filename, line = detail.line, function = detail.function {
-                output += "(\(function), \(filename.lastPathComponent):\(line)) "
+                output += "(\(function), \((filename as NSString).lastPathComponent):\(line)) "
             }
         }
 

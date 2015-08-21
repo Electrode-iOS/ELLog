@@ -37,7 +37,7 @@ public protocol LogDestinationProtocol: class {
 
 /// A struct describing a log message in detail.
 @objc(THGLogDetail)
-public class LogDetail {
+public class LogDetail: NSObject {
     /// The date at which the log call was made.  Note: This will never be an exact time, but approximate.
     var date: NSDate? = nil
     /// The message.

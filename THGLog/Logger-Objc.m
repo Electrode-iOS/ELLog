@@ -11,7 +11,7 @@
 
 @implementation LoggerObjc
 
-+ (void)log:(Logger *)instance logLevel:(NSUInteger)level function:(NSString *)function filename:(NSString *)filename line:(NSUInteger)line format:(NSString *)format, ... {
++ (void)log:(THGLogger *)instance logLevel:(NSUInteger)level function:(NSString *)function filename:(NSString *)filename line:(NSUInteger)line format:(NSString *)format, ... {
     va_list argp;
     va_start(argp, format);
 
