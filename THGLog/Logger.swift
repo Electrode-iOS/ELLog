@@ -60,7 +60,7 @@ public struct LogLevel: OptionSetType, BooleanType, CustomDebugStringConvertible
             options.append("VERBOSE")
         }
 
-        return ", ".join(options)
+        return options.joinWithSeparator(", ")
     }
 
     public init(rawValue: UInt) { self.rawValue = rawValue }
