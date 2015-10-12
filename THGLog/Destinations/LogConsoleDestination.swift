@@ -48,7 +48,7 @@ public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
             output += message
         }
 
-        NSLog(output)
+        NSLog("%@", output)
     }
 
     public var showCaller: Bool = false
