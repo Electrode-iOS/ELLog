@@ -26,7 +26,7 @@ public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
 
         if showLogLevel {
             if let level = detail.level {
-                output += "[\(level)] "
+                output += "[\(LogLevel(rawValue: level))] "
             }
         }
 
@@ -48,7 +48,7 @@ public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
             output += message
         }
 
-        NSLog(output)
+        NSLog("%@", output)
     }
 
     public var showCaller: Bool = false

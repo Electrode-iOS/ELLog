@@ -52,7 +52,7 @@ public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol 
 
         if showLogLevel {
             if let level = detail.level {
-                output += "[\(level)] "
+                output += "[\(LogLevel(rawValue: level))] "
             }
         }
 

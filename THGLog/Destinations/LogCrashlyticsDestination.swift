@@ -31,7 +31,7 @@ public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtoc
 
         if showLogLevel {
             if let level = detail.level {
-                output += "[\(level)] "
+                output += "[\(LogLevel(rawValue: level))] "
             }
         }
 
