@@ -15,7 +15,7 @@ public protocol LogDestinationProtocol: class {
     /**
     Sent to the destination when a log statement is executed.
 
-    :param: detail Detailed information about the log statement.
+    - parameter detail: Detailed information about the log statement.
     */
     func log(detail: LogDetail)
     /**
@@ -37,7 +37,7 @@ public protocol LogDestinationProtocol: class {
 
 /// A struct describing a log message in detail.
 @objc(THGLogDetail)
-public class LogDetail {
+public class LogDetail: NSObject {
     /// The date at which the log call was made.  Note: This will never be an exact time, but approximate.
     var date: NSDate? = nil
     /// The message.
@@ -71,6 +71,6 @@ public class LogDestinationBase: NSObject {
     public var identifier: String = NSUUID().UUIDString
     public var level: UInt
 
-    internal let dateFormatter: NSDateFormatter = NSThread.dateFormatter(dateFormat)
+    internal let dateFormatter: NSDateFormatter = NSThread.dateFormatter_THGLog(dateFormat)
     internal static let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 }

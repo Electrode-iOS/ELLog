@@ -11,10 +11,10 @@ import Foundation
 /**
 Convenicen function to post logs to the default logging mechanism.
 
-:param: level The log level.
-:param: message The message to display.
+- parameter level: The log level.
+- parameter message: The message to display.
 */
-public func log(level: LogLevel, message: String) {
+public func log(level: LogLevel, _ message: String) {
     Logger.defaultInstance.log(level, message: message)
 }
 

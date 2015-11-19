@@ -11,7 +11,7 @@ import XCTest
 import THGLog
 import Crashlytics
 
-public enum TestEnum: Printable {
+public enum TestEnum: CustomStringConvertible {
     case One
     case Two
     case Three
@@ -26,8 +26,6 @@ public enum TestEnum: Printable {
                 return "Two"
             case Three:
                 return "Three"
-            default:
-                return "Unknown"
             }
         }
     }
@@ -50,7 +48,7 @@ class THGLogTests: XCTestCase {
         //XCTAssert(true, "Pass")
 
         let number = NSNumber(integer: 1234)
-        let test: TestEnum = .One
+        let _: TestEnum = .One
 
         CLSLogv("hello = %@", getVaList([number]))
 
@@ -61,7 +59,7 @@ class THGLogTests: XCTestCase {
 
         Logger.defaultInstance.addDestination(crashlytics)
 
-        Logger.defaultInstance.log(.Debug | .Info, message: "hello \(number)")
+        Logger.defaultInstance.log([.Debug, .Info], message: "hello \(number)")
 
         //Logger.defaultInstance.log(.Debug | .Info, message: "Hello \(number)")
         //oldStyleLog(.Warning, "result = %@, %f, %@, %@", self, 3.14, "hello", number)
@@ -73,6 +71,28 @@ class THGLogTests: XCTestCase {
         self.measureBlock() {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testLogLevel() {
+        var level = LogLevel.Debug
+        
+        XCTAssertTrue(level.contains(.Debug))
+        XCTAssertFalse(level.contains(.Error))
+
+        level.insert(.Error)
+        XCTAssertTrue(level.contains(.Error))
+        
+        level.remove(.Debug)
+        XCTAssertFalse(level.contains(.Debug))
+        
+        level = LogLevel.All
+        XCTAssertTrue(level.contains(LogLevel.All))
+
+        let obnoxiousLevels:LogLevel = [.Verbose, .Debug]
+        level.remove(obnoxiousLevels)
+        XCTAssertFalse(level.contains(LogLevel.All))
+        
+        XCTAssertTrue(level.contains(.Info))
     }
     
 }

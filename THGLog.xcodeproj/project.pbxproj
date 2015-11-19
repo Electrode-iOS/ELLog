@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CA13BBD11AB8946400165813 /* LogTextfileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */; };
-		CA13BBD41AB894D700165813 /* NSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread.swift */; };
+		CA13BBD41AB894D700165813 /* NSThread+THGLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread+THGLog.swift */; };
 		CA13BC121AB8A35800165813 /* LogCrashlyticsDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BC111AB8A35800165813 /* LogCrashlyticsDestination.swift */; };
 		CA13BC151AB8D35300165813 /* LogCrashlyticsDestination-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CA13BC131AB8D35300165813 /* LogCrashlyticsDestination-Objc.h */; };
 		CA13BC161AB8D35300165813 /* LogCrashlyticsDestination-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CA13BC141AB8D35300165813 /* LogCrashlyticsDestination-Objc.m */; };
-		CA2410511AF966F600AA4410 /* NSThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread.swift */; };
+		CA2410511AF966F600AA4410 /* NSThread+THGLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread+THGLog.swift */; };
 		CA2410521AF966F600AA4410 /* LogTextfileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */; };
 		CA2410531AF966F600AA4410 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EF81AB660F00021C342 /* Logger.swift */; };
 		CA2410541AF966F600AA4410 /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* Logger-Objc.m */; };
@@ -49,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTextfileDestination.swift; sourceTree = "<group>"; };
-		CA13BBD31AB894D700165813 /* NSThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSThread.swift; sourceTree = "<group>"; };
+		CA13BBD31AB894D700165813 /* NSThread+THGLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSThread+THGLog.swift"; sourceTree = "<group>"; };
 		CA13BC111AB8A35800165813 /* LogCrashlyticsDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCrashlyticsDestination.swift; sourceTree = "<group>"; };
 		CA13BC131AB8D35300165813 /* LogCrashlyticsDestination-Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LogCrashlyticsDestination-Objc.h"; sourceTree = "<group>"; };
 		CA13BC141AB8D35300165813 /* LogCrashlyticsDestination-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LogCrashlyticsDestination-Objc.m"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		CA13BBD21AB894C500165813 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CA13BBD31AB894D700165813 /* NSThread.swift */,
+				CA13BBD31AB894D700165813 /* NSThread+THGLog.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,7 +281,8 @@
 		CA8D47B21AAE6FF50028B74D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = TheHolyGrail;
 				TargetAttributes = {
 					CA8D47BA1AAE6FF50028B74D = {
@@ -340,7 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA2410511AF966F600AA4410 /* NSThread.swift in Sources */,
+				CA2410511AF966F600AA4410 /* NSThread+THGLog.swift in Sources */,
 				CA2410521AF966F600AA4410 /* LogTextfileDestination.swift in Sources */,
 				CA2410531AF966F600AA4410 /* Logger.swift in Sources */,
 				CA2410541AF966F600AA4410 /* Logger-Objc.m in Sources */,
@@ -356,7 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA13BBD41AB894D700165813 /* NSThread.swift in Sources */,
+				CA13BBD41AB894D700165813 /* NSThread+THGLog.swift in Sources */,
 				CA13BBD11AB8946400165813 /* LogTextfileDestination.swift in Sources */,
 				CAB30EF91AB660F00021C342 /* Logger.swift in Sources */,
 				CAB30F031AB6766C0021C342 /* Logger-Objc.m in Sources */,
@@ -406,6 +407,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_MODULE_NAME = THGLog;
 				PRODUCT_NAME = THGLog;
 				PROVISIONING_PROFILE = "";
@@ -432,6 +434,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_MODULE_NAME = THGLog;
 				PRODUCT_NAME = THGLog;
 				PROVISIONING_PROFILE = "";
@@ -461,6 +464,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -546,6 +550,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -571,6 +576,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -582,7 +588,6 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/THGLog",
 					"$(PROJECT_DIR)/THGLogTests",
@@ -593,6 +598,7 @@
 				);
 				INFOPLIST_FILE = THGLogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "THGLogTests/THGLogTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -604,13 +610,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/THGLog",
 					"$(PROJECT_DIR)/THGLogTests",
 				);
 				INFOPLIST_FILE = THGLogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "THGLogTests/THGLogTests-Bridging-Header.h";
 			};
