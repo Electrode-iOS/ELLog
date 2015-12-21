@@ -11,7 +11,7 @@ import Foundation
 /**
 Logging Level option flags.
 */
-public struct LogLevel: OptionSetType, BooleanType, CustomDebugStringConvertible {
+public struct LogLevel: OptionSetType, BooleanType, CustomStringConvertible {
     /// Logging disabled.
     public let rawValue: UInt
     
@@ -33,7 +33,7 @@ public struct LogLevel: OptionSetType, BooleanType, CustomDebugStringConvertible
     public static let All:LogLevel = [.Error, .Debug, .Info, .Verbose]
 
     /// Returns a string representation of the current logging level(s).
-    public var debugDescription: String {
+    public var description: String {
         var options: Array<String> = []
 
         if self == .None {
