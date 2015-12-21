@@ -75,12 +75,36 @@ Logger class.
 Logs messages to the added destinations based on LogLevel flags.
 */
 @objc(THGLogger)
-public final class Logger: NSObject {
+public class Logger: NSObject {
 
     /**
     The default logger instance.  This is typically a LogConsoleDestination with a log level of .Debug.
     */
     public static let defaultInstance = loggerDefault()
+    
+    /**
+    Allows this logger to be enabled/disabled.
+    */
+    public var enabled: Bool {
+        get {
+            objc_sync_enter(self)
+            let value = _enabled
+            objc_sync_exit(self)
+            return value
+        }
+        set(value) {
+            objc_sync_enter(self)
+            _enabled = value
+            objc_sync_exit(self)
+        }
+    }
+    private var _enabled = false
+    
+    public override init() {
+        super.init()
+        let console = LogConsoleDestination(level: [.Debug, .Error])
+        addDestination(console)
+    }
 
     /**
     Dispatches the provided log information to the logging destination.
@@ -147,6 +171,12 @@ public final class Logger: NSObject {
     }
 
     private func log(detail: LogDetail) {
+        // if this logger isn't enabled, gtfo.
+        if !enabled {
+            return
+        }
+        
+        // cycle through the destinations and start writing.
         for destination in destinations.values {
             if let rawLevel = detail.level {
                 let level: LogLevel = LogLevel(rawValue: rawLevel)
@@ -172,8 +202,7 @@ public final class Logger: NSObject {
 /// Private convenience method for instantiating the default logging scheme.
 private func loggerDefault() -> Logger {
     let logger = Logger()
-    let console = LogConsoleDestination(level: [.Debug, .Error])
-    logger.addDestination(console)
+    logger.enabled = true
     return logger
 }
 
