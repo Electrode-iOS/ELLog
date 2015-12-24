@@ -1,9 +1,6 @@
-# Shrubbery
-THGLog module.
+# Shrubbery [![Build Status](https://travis-ci.org/TheHolyGrail/Shrubbery.svg)](https://travis-ci.org/TheHolyGrail/Shrubbery)
 
-Provides versatile logging options for Swift and Objective-C code.
-
-___
+THGLog module. Provides versatile logging options for Swift and Objective-C code.
 
 ## Introduction
 
