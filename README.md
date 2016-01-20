@@ -1,10 +1,10 @@
-# Shrubbery [![Build Status](https://travis-ci.org/TheHolyGrail/Shrubbery.svg)](https://travis-ci.org/TheHolyGrail/Shrubbery)
+# Shrubbery [![Build Status](https://travis-ci.org/WalmartLabs/Shrubbery.svg)](https://travis-ci.org/WalmartLabs/Shrubbery)
 
-THGLog module. Provides versatile logging options for Swift and Objective-C code.
+ELLog module. Provides versatile logging options for Swift and Objective-C code.
 
 ## Introduction
 
-THGLog/Shrubbery is a Swift framework for logging.  It provides a default instance that funnels through NSLog to the console.
+ELLog/Shrubbery is a Swift framework for logging.  It provides a default instance that funnels through NSLog to the console.
 It also provides options to log to a textfile as well as Crashlytics.  It's fully extensible and makes it easy to add new
 logging destinations.
 
@@ -73,11 +73,11 @@ gardenStore.level = LogLevelError;
 
 ...
 
-THGLog(LogLevelError, @"value = %@", @1);
+ELLog(LogLevelError, @"value = %@", @1);
 
 // or ...
 
-THGLogError(@"value = %@", @1);
+ELLogError(@"value = %@", @1);
 ```
 
 Use a custom logging instance in Objective-C:
@@ -90,14 +90,14 @@ Logger *myLogger = [[Logger alloc] init];
 
 ...
 
-THGLogCustom(myLogger, LogLevelError, @"value = %@", @1);
+ELLogCustom(myLogger, LogLevelError, @"value = %@", @1);
 ```
 
 ## Contributions
 
 We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
 
-When contributing code, please refer to our Dennis (https://github.com/TheHolyGrail/Dennis).
+When contributing code, please refer to our Dennis (https://github.com/WalmartLabs/Dennis).
 
 ###### THG's Primary Contributors
 
@@ -112,7 +112,7 @@ Wes Ostler (@wesostler)<br>
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Walmart, TheHolyGrail, and other Contributors
+Copyright (c) 2015 Walmart, WalmartLabs, and other Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
