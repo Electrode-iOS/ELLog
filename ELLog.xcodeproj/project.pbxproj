@@ -409,6 +409,7 @@
 				PRODUCT_MODULE_NAME = ELLog;
 				PRODUCT_NAME = ELLog;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -436,6 +437,7 @@
 				PRODUCT_MODULE_NAME = ELLog;
 				PRODUCT_NAME = ELLog;
 				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
