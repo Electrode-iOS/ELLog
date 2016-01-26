@@ -26,7 +26,7 @@ extension NSThread {
             cache = Dictionary<String, NSDateFormatter>()
         }
 
-        let formatKey = format + "_" + locale.localeIdentifier
+        let formatKey = "\(format)_\(locale.localeIdentifier)"
         if let existing = cache?[formatKey] {
             return existing
         }
