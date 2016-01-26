@@ -39,17 +39,17 @@ public protocol LogDestinationProtocol: class {
 @objc(ELLogDetail)
 public class LogDetail: NSObject {
     /// The date at which the log call was made.  Note: This will never be an exact time, but approximate.
-    var date: NSDate? = nil
+    public var date: NSDate? = nil
     /// The message.
-    var message: String? = nil
+    public var message: String? = nil
     /// The level at which this was logged.
-    var level: UInt? = .None
+    public var level: UInt? = .None
     /// The function in which log was called.
-    var function: String? = nil
+    public var function: String? = nil
     /// The filename in which log was called.
-    var filename: String? = nil
+    public var filename: String? = nil
     /// The line number which called log.
-    var line: UInt? = nil
+    public var line: UInt? = nil
 }
 
 /**
@@ -71,6 +71,6 @@ public class LogDestinationBase: NSObject {
     public var identifier: String = NSUUID().UUIDString
     public var level: UInt
 
-    internal let dateFormatter: NSDateFormatter = NSThread.dateFormatter_ELLog(dateFormat)
+    public let dateFormatter: NSDateFormatter = NSThread.dateFormatter_ELLog(dateFormat)
     internal static let dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 }
