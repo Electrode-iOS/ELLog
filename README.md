@@ -37,7 +37,7 @@ Configure and use a custom logger instance:
 let headKnight = Logger()
 
 // we want to log any messages that are flagged with .Error or .Debug
-let shrubbery = LogCrashlyticsDestination(.Error | .Debug)
+let shrubbery = LogCrashlyticsDestination(level: [LogLevel.Error, LogLevel.Debug])
 
 // add it to our logger instance.
 headKnight.addDestination(shrubbery)
