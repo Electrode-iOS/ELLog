@@ -98,7 +98,7 @@ public class Logger: NSObject {
             objc_sync_exit(self)
         }
     }
-    private var _enabled = false
+    private var _enabled = true
     
     public override init() {
         super.init()
