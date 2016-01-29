@@ -54,11 +54,6 @@ class ELLogTests: XCTestCase {
 
         //Logger.defaultInstance.removeAllDestionations()
 
-        let crashlytics = LogCrashlyticsDestination()
-        crashlytics.level = LogLevel.Info.rawValue
-
-        Logger.defaultInstance.addDestination(crashlytics)
-
         Logger.defaultInstance.log([.Debug, .Info], message: "hello \(number)")
 
         //Logger.defaultInstance.log(.Debug | .Info, message: "Hello \(number)")
