@@ -5,8 +5,7 @@ ELLog module. Provides versatile logging options for Swift and Objective-C code.
 ## Introduction
 
 ELLog/Shrubbery is a Swift framework for logging.  It provides a default instance that funnels through NSLog to the console.
-It also provides options to log to a textfile as well as Crashlytics.  It's fully extensible and makes it easy to add new
-logging destinations.
+It also provides options to log to a textfile.  It's fully extensible and makes it easy to add new logging destinations.
 
 Provides the following functionality:
 
@@ -15,7 +14,10 @@ Provides the following functionality:
 * Logger classes can be created should you want to log differently in a particular section of your app.
 * Ability to add custom destinations to a given Logger instance.  Add one, or add many.
 * Ability to specify levels per destination.  ie: Only log .Error level messages to Crashlytics.
-* LogCrashlyticsDestination checks for the Crashlytics framework at runtime, so no hard dependencies exist.
+
+## Optional Features
+
+ELLog provides optional logging to Crashlytics. See the README in Destinations/Crashlytics/README.md
 
 ## Common Usage
 

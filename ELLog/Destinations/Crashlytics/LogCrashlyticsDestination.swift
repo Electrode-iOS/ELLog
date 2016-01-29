@@ -7,10 +7,8 @@
 //
 
 import Foundation
-
-// This is an example of declaring a C function from ObjC code.
-@asmname("crashlyticsLog")
-internal func crashlyticsLog(format: NSString, args: CVaListPointer)
+import ELLog
+import Crashlytics
 
 /**
 LogCrashlyticsDestination provides output the Crashlytics framework.  Crashlytics
@@ -54,7 +52,7 @@ public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtoc
         }
 
         let emptyPointer = CVaListPointer(_fromUnsafeMutablePointer: nil)
-        crashlyticsLog(output, args: emptyPointer)
+        CLSLogv(output, emptyPointer)
     }
 
     public var showCaller: Bool = true
