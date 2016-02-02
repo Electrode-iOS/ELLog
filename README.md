@@ -1,15 +1,11 @@
-# Shrubbery
-THGLog module.
+# Shrubbery [![Build Status](https://travis-ci.org/WalmartLabs/Shrubbery.svg)](https://travis-ci.org/WalmartLabs/Shrubbery)
 
-Provides versatile logging options for Swift and Objective-C code.
-
-___
+ELLog module. Provides versatile logging options for Swift and Objective-C code.
 
 ## Introduction
 
-THGLog/Shrubbery is a Swift framework for logging.  It provides a default instance that funnels through NSLog to the console.
-It also provides options to log to a textfile as well as Crashlytics.  It's fully extensible and makes it easy to add new
-logging destinations.
+ELLog/Shrubbery is a Swift framework for logging.  It provides a default instance that funnels through NSLog to the console.
+It also provides options to log to a textfile.  It's fully extensible and makes it easy to add new logging destinations.
 
 Provides the following functionality:
 
@@ -18,7 +14,10 @@ Provides the following functionality:
 * Logger classes can be created should you want to log differently in a particular section of your app.
 * Ability to add custom destinations to a given Logger instance.  Add one, or add many.
 * Ability to specify levels per destination.  ie: Only log .Error level messages to Crashlytics.
-* LogCrashlyticsDestination checks for the Crashlytics framework at runtime, so no hard dependencies exist.
+
+## Optional Features
+
+ELLog provides optional logging to Crashlytics. See the README in Destinations/Crashlytics/README.md
 
 ## Common Usage
 
@@ -40,7 +39,7 @@ Configure and use a custom logger instance:
 let headKnight = Logger()
 
 // we want to log any messages that are flagged with .Error or .Debug
-let shrubbery = LogCrashlyticsDestination(.Error | .Debug)
+let shrubbery = LogCrashlyticsDestination(level: [LogLevel.Error, LogLevel.Debug])
 
 // add it to our logger instance.
 headKnight.addDestination(shrubbery)
@@ -76,11 +75,11 @@ gardenStore.level = LogLevelError;
 
 ...
 
-THGLog(LogLevelError, @"value = %@", @1);
+ELLog(LogLevelError, @"value = %@", @1);
 
 // or ...
 
-THGLogError(@"value = %@", @1);
+ELLogError(@"value = %@", @1);
 ```
 
 Use a custom logging instance in Objective-C:
@@ -93,14 +92,14 @@ Logger *myLogger = [[Logger alloc] init];
 
 ...
 
-THGLogCustom(myLogger, LogLevelError, @"value = %@", @1);
+ELLogCustom(myLogger, LogLevelError, @"value = %@", @1);
 ```
 
 ## Contributions
 
 We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
 
-When contributing code, please refer to our Dennis (https://github.com/TheHolyGrail/Dennis).
+When contributing code, please refer to our Dennis (https://github.com/WalmartLabs/Dennis).
 
 ###### THG's Primary Contributors
 
@@ -115,7 +114,7 @@ Wes Ostler (@wesostler)<br>
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Walmart, TheHolyGrail, and other Contributors
+Copyright (c) 2015 Walmart, WalmartLabs, and other Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
