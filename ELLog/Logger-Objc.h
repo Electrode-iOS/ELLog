@@ -18,13 +18,13 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
 };
 
 
-@interface LoggerObjc: NSObject
+@interface ELLoggerObjc: NSObject
 + (void)log:(id)instance logLevel:(NSUInteger)level function:(NSString *)function filename:(NSString *)filename line:(NSUInteger)line format:(NSString *)format, ...;
 @end
 
 
 #define ELLogCustom(instance, lvl, frmt, ...) \
-    [LoggerObjc log:instance \
+    [ELLoggerObjc log:instance \
            logLevel:lvl \
            function:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] \
            filename:[NSString stringWithUTF8String:__FILE__] \
