@@ -74,7 +74,7 @@ gardenStore.level = LogLevelError;
 
 ...
 
-ELLog(LogLevelError, @"value = %@", @1);
+ELLog(ELLogLevelError, @"value = %@", @1);
 
 // or ...
 

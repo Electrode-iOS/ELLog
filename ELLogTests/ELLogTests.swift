@@ -11,26 +11,6 @@ import XCTest
 import ELLog
 import Crashlytics
 
-public enum TestEnum: CustomStringConvertible {
-    case One
-    case Two
-    case Three
-
-
-    public var description: String {
-        get {
-            switch self {
-            case One:
-                return "One"
-            case Two:
-                return "Two"
-            case Three:
-                return "Three"
-            }
-        }
-    }
-}
-
 class ELLogTests: XCTestCase {
     
     override func setUp() {
@@ -43,29 +23,31 @@ class ELLogTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        //XCTAssert(true, "Pass")
-
+    
+    func runTestsOn(logger: Logger) {
         let number = NSNumber(integer: 1234)
-        let _: TestEnum = .One
+        
+        logger.removeAllDestionations()
 
-        CLSLogv("hello = %@", getVaList([number]))
-
-        //Logger.defaultInstance.removeAllDestionations()
-
-        Logger.defaultInstance.log([.Debug, .Info], message: "hello \(number)")
-
-        //Logger.defaultInstance.log(.Debug | .Info, message: "Hello \(number)")
-        //oldStyleLog(.Warning, "result = %@, %f, %@, %@", self, 3.14, "hello", number)
-        //__log("result = %@, %f, %@, %@", test, 3.14, "hello", number)
+        // This destination captures the LogDetail sent to Logger
+        let unitTestDestination = LogUnitTestDestination()
+        logger.addDestination(unitTestDestination)
+        
+        let testMessage = "hello \(number)"
+        let testLogLevel: LogLevel = [.Debug, .Info]
+        logger.log(testLogLevel, message: testMessage)
+        XCTAssert(unitTestDestination.lastLogDetail.level == testLogLevel.rawValue)
+        XCTAssert(unitTestDestination.lastLogDetail.message == testMessage)
+    }
+    
+    func testInstance() {
+        let logger = Logger()
+        runTestsOn(logger)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testSingleton() {
+        runTestsOn(Logger.defaultInstance)
     }
     
     func testLogLevel() {

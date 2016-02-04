@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, LogLevel) {
-    LogLevelNone = 0,
-    LogLevelError = 1 << 0,
-    LogLevelDebug = 1 << 1,
-    LogLevelInfo = 1 << 2,
-    LogLevelVerbose = 1 << 3,
-    LogLevelAll = LogLevelError | LogLevelDebug | LogLevelInfo | LogLevelVerbose
+typedef NS_ENUM(NSUInteger, ELLogLevel) {
+    ELLogLevelNone = 0,
+    ELLogLevelError = 1 << 0,
+    ELLogLevelDebug = 1 << 1,
+    ELLogLevelInfo = 1 << 2,
+    ELLogLevelVerbose = 1 << 3,
+    ELLogLevelAll = ELLogLevelError | ELLogLevelDebug | ELLogLevelInfo | ELLogLevelVerbose
 };
 
 
@@ -35,14 +35,14 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
     ELLogCustom(ELLogger.defaultInstance, lvl, frmt, ## __VA_ARGS__)
 
 #define ELLogError(frmt, ...) \
-    ELLog(LogLevelError, frmt, ## __VA_ARGS__)
+    ELLog(ELLogLevelError, frmt, ## __VA_ARGS__)
 
 #define ELLogDebug(frmt, ...) \
-    ELLog(LogLevelDebug, frmt, ## __VA_ARGS__)
+    ELLog(ELLogLevelDebug, frmt, ## __VA_ARGS__)
 
 #define ELLogInfo(frmt, ...) \
-    ELLog(LogLevelInfo, frmt, ## __VA_ARGS__)
+    ELLog(ELLogLevelInfo, frmt, ## __VA_ARGS__)
 
 #define ELLogVerbose(frmt, ...) \
-    ELLog(LogLevelVerbose, frmt, ## __VA_ARGS__)
+    ELLog(ELLogLevelVerbose, frmt, ## __VA_ARGS__)
 
