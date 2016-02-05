@@ -24,6 +24,11 @@ The default behavior is:
 @objc(ELLogCrashlyticsDestination)
 public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtocol {
 
+    // LogDestinationProtocol compliance
+    public var showCaller: Bool = true
+    public var showLogLevel: Bool = true
+    public var showTimestamp: Bool = false
+
     public func log(detail: LogDetail) {
         var output: String = ""
 
@@ -54,9 +59,5 @@ public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtoc
         let emptyPointer = CVaListPointer(_fromUnsafeMutablePointer: nil)
         CLSLogv(output, emptyPointer)
     }
-
-    public var showCaller: Bool = true
-    public var showLogLevel: Bool = true
-    public var showTimestamp: Bool = false
 }
 
