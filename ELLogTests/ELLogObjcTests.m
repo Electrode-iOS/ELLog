@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
 @import ELLog;
-@import Crashlytics;
 #import "ELLogTests-Swift.h"
 
 

@@ -9,7 +9,6 @@
 import UIKit
 import XCTest
 import ELLog
-import Crashlytics
 
 class ELLogTests: XCTestCase {
     
