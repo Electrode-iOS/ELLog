@@ -27,7 +27,7 @@ class ELLogTests: XCTestCase {
     func runTestsOn(logger: Logger) {
         let number = NSNumber(integer: 1234)
         
-        logger.removeAllDestionations()
+        logger.removeAllDestinations()
 
         // This destination captures the LogDetail sent to Logger
         let unitTestDestination = LogUnitTestDestination()

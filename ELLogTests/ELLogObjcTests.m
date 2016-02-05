@@ -42,7 +42,7 @@
 - (void) runTestsOn:(ELLogger *)logger {
     NSNumber *number = [NSNumber numberWithInt:1234];
     
-    [logger removeAllDestionations];
+    [logger removeAllDestinations];
     
     // This destination captures the LogDetail sent to Logger
     ELLogUnitTestDestination *unitTestDestination = [[ELLogUnitTestDestination alloc] init];
