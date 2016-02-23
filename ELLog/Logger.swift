@@ -144,7 +144,7 @@ public class Logger: NSObject {
     /**
     Removes all destinations from this Logger instance.
     */
-    public func removeAllDestionations() {
+    public func removeAllDestinations() {
         destinations.removeAll(keepCapacity: false)
     }
 

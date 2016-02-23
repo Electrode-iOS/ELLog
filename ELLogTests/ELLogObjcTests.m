@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
 @import ELLog;
-@import Crashlytics;
+#import "ELLogTests-Swift.h"
 
 
 @interface ELLogObjcTests : XCTestCase
@@ -29,22 +29,54 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-
     ELLogger *l = ELLogger.defaultInstance;
     ELLogTextfileDestination *textfile = [[ELLogTextfileDestination alloc] initWithFilename:@"blah.txt"];
-    textfile.level = LogLevelError;
+    textfile.level = ELLogLevelError;
 
     [l addDestination:textfile];
-    ELLog(LogLevelDebug, @"value = %@, do you like it?  %@", @1, @"Yayusss...");
+    ELLog(ELLogLevelDebug, @"value = %@, do you like it?  %@", @1, @"Yayusss...");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+
+- (void) runTestsOn:(ELLogger *)logger {
+    NSNumber *number = [NSNumber numberWithInt:1234];
+    
+    [logger removeAllDestinations];
+    
+    // This destination captures the LogDetail sent to Logger
+    ELLogUnitTestDestination *unitTestDestination = [[ELLogUnitTestDestination alloc] init];
+    [logger addDestination:unitTestDestination];
+    
+    NSString *testMessage = [NSString stringWithFormat:@"hello %@", number];
+    NSInteger testLogLevel = ELLogLevelError | ELLogLevelDebug;
+    
+    // Call the Obj-C interface directly to test outside of macro
+    [ELLoggerObjc log:logger
+             logLevel:testLogLevel
+             function:[NSString stringWithUTF8String:__PRETTY_FUNCTION__]
+             filename:[NSString stringWithUTF8String:__FILE__]
+                 line:__LINE__
+               format:testMessage];
+
+    // Cannot test 'level' because optional scalars are no longer exported to Obj-C
+    XCTAssertEqualObjects(unitTestDestination.lastLogDetail.message, testMessage);
+}
+
+- (void) testInstance {
+    ELLogger *logger = [[ELLogger alloc] init];
+    [self runTestsOn:logger];
+}
+
+
+- (void) testSingleton {
+    [self runTestsOn:ELLogger.defaultInstance];
+}
+
+- (void)testMacros {
+    ELLogDebug(@"testing that ELLogDebug builds");
+    ELLogVerbose(@"testing that ELLogVerbose builds");
+    ELLogInfo(@"testing that ELLogInfo builds");
+    ELLogError(@"testing that ELLogError builds");
 }
 
 @end

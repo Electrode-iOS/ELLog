@@ -1,11 +1,10 @@
-# Shrubbery [![Build Status](https://travis-ci.org/WalmartLabs/Shrubbery.svg)](https://travis-ci.org/WalmartLabs/Shrubbery)
+# ELLog [![Build Status](https://travis-ci.org/Electrode-iOS/ELLog.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELLog)
 
-ELLog module. Provides versatile logging options for Swift and Objective-C code.
+ELLog is a framework that provides versatile logging options for Swift and Objective-C code.
 
 ## Introduction
 
-ELLog/Shrubbery is a Swift framework for logging.  It provides a default instance that funnels through NSLog to the console.
-It also provides options to log to a textfile.  It's fully extensible and makes it easy to add new logging destinations.
+ELLog provides a default instance that funnels through NSLog to the console. It also provides options to log to a textfile.  It's fully extensible and makes it easy to add new logging destinations.
 
 Provides the following functionality:
 
@@ -75,7 +74,7 @@ gardenStore.level = LogLevelError;
 
 ...
 
-ELLog(LogLevelError, @"value = %@", @1);
+ELLog(ELLogLevelError, @"value = %@", @1);
 
 // or ...
 

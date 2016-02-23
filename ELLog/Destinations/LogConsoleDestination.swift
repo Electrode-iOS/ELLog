@@ -21,6 +21,11 @@ The default behavior is:
 @objc(ELLogConsoleDestination)
 public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
 
+    // LogDestinationProtocol compliance
+    public var showCaller: Bool = false
+    public var showLogLevel: Bool = true
+    public var showTimestamp: Bool = false
+
     public func log(detail: LogDetail) {
         var output: String = ""
 
@@ -48,12 +53,8 @@ public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
             output += message
         }
 
-        NSLog("%@", output)
+        NSLog(output)
     }
-
-    public var showCaller: Bool = false
-    public var showLogLevel: Bool = true
-    public var showTimestamp: Bool = false
 }
 
 

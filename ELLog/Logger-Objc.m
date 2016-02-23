@@ -9,7 +9,7 @@
 #import "Logger-Objc.h"
 #import <ELLog/ELLog-Swift.h>
 
-@implementation LoggerObjc
+@implementation ELLoggerObjc
 
 + (void)log:(ELLogger *)instance logLevel:(NSUInteger)level function:(NSString *)function filename:(NSString *)filename line:(NSUInteger)line format:(NSString *)format, ... {
     va_list argp;

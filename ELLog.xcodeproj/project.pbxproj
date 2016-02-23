@@ -7,19 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07094F9D1C603B46004803B8 /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 07094F9C1C603B46004803B8 /* Logger-Objc.m */; };
-		48A4A6E71B026E2F00DC86EF /* (null) in Sources */ = {isa = PBXBuildFile; };
+		20C3E9201C64099A002BC2DA /* LogUnitTestDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3E91F1C64099A002BC2DA /* LogUnitTestDestination.swift */; };
 		CA13BBD11AB8946400165813 /* LogTextfileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */; };
 		CA13BBD41AB894D700165813 /* NSThread+ELLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread+ELLog.swift */; };
 		CA2410511AF966F600AA4410 /* NSThread+ELLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD31AB894D700165813 /* NSThread+ELLog.swift */; };
 		CA2410521AF966F600AA4410 /* LogTextfileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */; };
 		CA2410531AF966F600AA4410 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EF81AB660F00021C342 /* Logger.swift */; };
+		CA2410541AF966F600AA4410 /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* Logger-Objc.m */; };
 		CA2410551AF966F600AA4410 /* LogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */; };
 		CA2410561AF966F600AA4410 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8D47D71AAE702C0028B74D /* Log.swift */; };
 		CA2410581AF966F600AA4410 /* LogDestinationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */; };
 		CA24105C1AF966F600AA4410 /* Logger-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB30F001AB6766C0021C342 /* Logger-Objc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA24105D1AF966F600AA4410 /* ELLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CA8D47C01AAE6FF50028B74D /* ELLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA6BBA461AB9F10600A45A82 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6BBA451AB9F10600A45A82 /* Crashlytics.framework */; };
 		CA8332C21AAEC739003C9058 /* ELLogObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8332C11AAEC739003C9058 /* ELLogObjcTests.m */; };
 		CA8D47C11AAE6FF50028B74D /* ELLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CA8D47C01AAE6FF50028B74D /* ELLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA8D47C71AAE6FF50028B74D /* ELLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8D47BB1AAE6FF50028B74D /* ELLog.framework */; };
@@ -28,6 +27,7 @@
 		CAB30EF91AB660F00021C342 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EF81AB660F00021C342 /* Logger.swift */; };
 		CAB30EFF1AB663C70021C342 /* LogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */; };
 		CAB30F021AB6766C0021C342 /* Logger-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB30F001AB6766C0021C342 /* Logger-Objc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAB30F031AB6766C0021C342 /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* Logger-Objc.m */; };
 		CACE89221AC1CC78000FE30E /* LogDestinationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,12 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07094F9C1C603B46004803B8 /* Logger-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Logger-Objc.m"; sourceTree = "<group>"; };
 		20A819031C5AE73C00FC8480 /* LogCrashlyticsDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCrashlyticsDestination.swift; sourceTree = "<group>"; };
+		20C3E91F1C64099A002BC2DA /* LogUnitTestDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogUnitTestDestination.swift; sourceTree = "<group>"; };
 		CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTextfileDestination.swift; sourceTree = "<group>"; };
 		CA13BBD31AB894D700165813 /* NSThread+ELLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSThread+ELLog.swift"; sourceTree = "<group>"; };
 		CA2410631AF966F600AA4410 /* ELLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ELLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA6BBA451AB9F10600A45A82 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		CA8332C01AAEC738003C9058 /* ELLogTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ELLogTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA8332C11AAEC739003C9058 /* ELLogObjcTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELLogObjcTests.m; sourceTree = "<group>"; };
 		CA8D47BB1AAE6FF50028B74D /* ELLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ELLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +59,7 @@
 		CAB30EF81AB660F00021C342 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CAB30EFE1AB663C70021C342 /* LogConsoleDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogConsoleDestination.swift; sourceTree = "<group>"; };
 		CAB30F001AB6766C0021C342 /* Logger-Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Logger-Objc.h"; sourceTree = "<group>"; };
+		CAB30F011AB6766C0021C342 /* Logger-Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Logger-Objc.m"; sourceTree = "<group>"; };
 		CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDestinationBase.swift; sourceTree = "<group>"; };
 		CACE89241AC1D432000FE30E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CACE89251AC1D432000FE30E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -84,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA6BBA461AB9F10600A45A82 /* Crashlytics.framework in Frameworks */,
 				CA8D47C71AAE6FF50028B74D /* ELLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,14 +105,6 @@
 				CA13BBD31AB894D700165813 /* NSThread+ELLog.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		CA6BBA471AB9F10F00A45A82 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CA6BBA451AB9F10600A45A82 /* Crashlytics.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CA8D47B11AAE6FF50028B74D = {
@@ -144,7 +135,7 @@
 				CA8D47D71AAE702C0028B74D /* Log.swift */,
 				CAB30EF81AB660F00021C342 /* Logger.swift */,
 				CAB30F001AB6766C0021C342 /* Logger-Objc.h */,
-				07094F9C1C603B46004803B8 /* Logger-Objc.m */,
+				CAB30F011AB6766C0021C342 /* Logger-Objc.m */,
 				CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */,
 				CA13BBD21AB894C500165813 /* Extensions */,
 				CAB30EFB1AB6634B0021C342 /* Destinations */,
@@ -164,8 +155,8 @@
 		CA8D47CA1AAE6FF50028B74D /* ELLogTests */ = {
 			isa = PBXGroup;
 			children = (
-				CA6BBA471AB9F10F00A45A82 /* Frameworks */,
 				CA8D47CD1AAE6FF50028B74D /* ELLogTests.swift */,
+				20C3E91F1C64099A002BC2DA /* LogUnitTestDestination.swift */,
 				CA8332C01AAEC738003C9058 /* ELLogTests-Bridging-Header.h */,
 				CA8332C11AAEC739003C9058 /* ELLogObjcTests.m */,
 				CA8D47CB1AAE6FF50028B74D /* Supporting Files */,
@@ -338,6 +329,7 @@
 				CA2410511AF966F600AA4410 /* NSThread+ELLog.swift in Sources */,
 				CA2410521AF966F600AA4410 /* LogTextfileDestination.swift in Sources */,
 				CA2410531AF966F600AA4410 /* Logger.swift in Sources */,
+				CA2410541AF966F600AA4410 /* Logger-Objc.m in Sources */,
 				CA2410551AF966F600AA4410 /* LogConsoleDestination.swift in Sources */,
 				CA2410561AF966F600AA4410 /* Log.swift in Sources */,
 				CA2410581AF966F600AA4410 /* LogDestinationBase.swift in Sources */,
@@ -351,9 +343,8 @@
 				CA13BBD41AB894D700165813 /* NSThread+ELLog.swift in Sources */,
 				CA13BBD11AB8946400165813 /* LogTextfileDestination.swift in Sources */,
 				CAB30EF91AB660F00021C342 /* Logger.swift in Sources */,
-				07094F9D1C603B46004803B8 /* Logger-Objc.m in Sources */,
+				CAB30F031AB6766C0021C342 /* Logger-Objc.m in Sources */,
 				CAB30EFF1AB663C70021C342 /* LogConsoleDestination.swift in Sources */,
-				48A4A6E71B026E2F00DC86EF /* (null) in Sources */,
 				CA8D47D81AAE702C0028B74D /* Log.swift in Sources */,
 				CACE89221AC1CC78000FE30E /* LogDestinationBase.swift in Sources */,
 			);
@@ -364,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA8332C21AAEC739003C9058 /* ELLogObjcTests.m in Sources */,
+				20C3E9201C64099A002BC2DA /* LogUnitTestDestination.swift in Sources */,
 				CA8D47CE1AAE6FF50028B74D /* ELLogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,7 +628,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ELLog",
@@ -660,7 +651,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ELLog",
@@ -715,7 +705,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA2410611AF966F600AA4410 /* Debug */,
-				20DC788E1BFEA238004AF8C8 /* QADeployment */,
 				CA2410621AF966F600AA4410 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -725,7 +714,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA8D47CF1AAE6FF50028B74D /* Debug */,
-				20DC788B1BFEA238004AF8C8 /* QADeployment */,
 				CA8D47D01AAE6FF50028B74D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -735,7 +723,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA8D47D21AAE6FF50028B74D /* Debug */,
-				20DC788C1BFEA238004AF8C8 /* QADeployment */,
 				CA8D47D31AAE6FF50028B74D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -745,7 +732,6 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CA8D47D51AAE6FF50028B74D /* Debug */,
-				20DC788D1BFEA238004AF8C8 /* QADeployment */,
 				CA8D47D61AAE6FF50028B74D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
