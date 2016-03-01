@@ -18,7 +18,7 @@ The default behavior is:
 
     level = .Debug,
     showCaller = true,
-    showLogLevel = true,
+    showLogLevel = false,
     showTimestamp = false
 */
 @objc(ELLogCrashlyticsDestination)
@@ -26,7 +26,7 @@ public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtoc
 
     // LogDestinationProtocol compliance
     public var showCaller: Bool = true
-    public var showLogLevel: Bool = true
+    public var showLogLevel: Bool = false
     public var showTimestamp: Bool = false
 
     public func log(detail: LogDetail) {

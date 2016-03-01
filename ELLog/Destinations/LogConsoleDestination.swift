@@ -53,7 +53,7 @@ public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
             output += message
         }
 
-        NSLog(output)
+        NSLog("%@", output)
     }
 }
 
