@@ -27,33 +27,37 @@ public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
     public var showTimestamp: Bool = false
 
     public func log(detail: LogDetail) {
-        var output: String = ""
-
+        NSLog(formattedLogString(detail))
+    }
+    
+    internal func formattedLogString(detail: LogDetail) -> String {
+        var logString: String = ""
+        
         if showLogLevel {
             if let level = detail.level {
-                output += "[\(LogLevel(rawValue: level).description)] "
+                logString += "[\(LogLevel(rawValue: level).description)] "
             }
         }
-
+        
         if showTimestamp {
             if let date = detail.date {
-                output += "[\(dateFormatter.stringFromDate(date))] "
+                logString += "[\(dateFormatter.stringFromDate(date))] "
             }
         }
-
+        
         if showCaller {
             if let filename = detail.filename, line = detail.line, function = detail.function {
-                output += "(\(function), \((filename as NSString).lastPathComponent):\(line)) "
+                logString += "(\(function), \((filename as NSString).lastPathComponent):\(line)) "
             }
         }
-
-        output += ": "
-
+        
+        logString += ": "
+        
         if let message = detail.message {
-            output += message
+            logString += message
         }
-
-        NSLog("%@", output)
+        
+        return logString
     }
 }
 
