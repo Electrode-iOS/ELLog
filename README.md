@@ -9,7 +9,7 @@ ELLog provides a default instance that funnels through NSLog to the console. It 
 Provides the following functionality:
 
 * log(level, message) - Uses Logger.defaultInstance to log to the console.
-* Macro's for use in Objective-C.
+* Macros for use in Objective-C.
 * Logger classes can be created should you want to log differently in a particular section of your app.
 * Ability to add custom destinations to a given Logger instance.  Add one, or add many.
 * Ability to specify levels per destination.  ie: Only log .Error level messages to Crashlytics.
@@ -98,16 +98,7 @@ ELLogCustom(myLogger, LogLevelError, @"value = %@", @1);
 
 We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
 
-When contributing code, please refer to our Dennis (https://github.com/WalmartLabs/Dennis).
-
-###### THG's Primary Contributors
-
-Dr. Sneed (@bsneed)<br>
-Steve Riggins (@steveriggins)<br>
-Sam Grover (@samgrover)<br>
-Angelo Di Paolo (@angelodipaolo)<br>
-Cody Garvin (@migs647)<br>
-Wes Ostler (@wesostler)<br>
+When contributing code, please refer to our [Dennis](https://github.com/Electrode-iOS/Dennis).
 
 ## License
 

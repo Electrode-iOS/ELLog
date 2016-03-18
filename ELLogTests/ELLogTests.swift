@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 WalmartLabs. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import XCTest
-import ELLog
+@testable import ELLog
 
 class ELLogTests: XCTestCase {
     
@@ -27,16 +27,28 @@ class ELLogTests: XCTestCase {
         let number = NSNumber(integer: 1234)
         
         logger.removeAllDestinations()
-
+        
+        XCTAssertTrue(logger.destinationsForTesting().isEmpty)
+        
         // This destination captures the LogDetail sent to Logger
         let unitTestDestination = LogUnitTestDestination()
+        let identifier = unitTestDestination.identifier
         logger.addDestination(unitTestDestination)
+        
+        XCTAssert(logger.destinationsForTesting().count == 1)
+        XCTAssert(logger.destination(identifier) === unitTestDestination)
         
         let testMessage = "hello \(number)"
         let testLogLevel: LogLevel = [.Debug, .Info]
+        
+        XCTAssert(testLogLevel.boolValue == true)
+        
         logger.log(testLogLevel, message: testMessage)
         XCTAssert(unitTestDestination.lastLogDetail.level == testLogLevel.rawValue)
         XCTAssert(unitTestDestination.lastLogDetail.message == testMessage)
+        
+        logger.removeDestination(identifier)
+        XCTAssertTrue(logger.destinationsForTesting().isEmpty)
     }
     
     func testInstance() {
