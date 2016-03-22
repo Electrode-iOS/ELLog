@@ -20,13 +20,8 @@ The default behavior is:
     showTimestamp = true
 */
 @objc(ELLogTextfileDestination)
-public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol {
+public class LogTextfileDestination: LogDestinationBase {
 
-    // LogDestinationProtocol compliance
-    public var showCaller: Bool = false
-    public var showLogLevel: Bool = true
-    public var showTimestamp: Bool = true
-    
     private let filename: String
     private let outputStream: NSOutputStream?
 
@@ -44,47 +39,23 @@ public class LogTextfileDestination: LogDestinationBase, LogDestinationProtocol 
         }
 
         super.init(level: .Debug)
+        
+        showCaller = false
+        showLogLevel = true
+        showTimestamp = true
     }
 
     deinit {
         outputStream?.close()
     }
 
-    public func log(detail: LogDetail) {
+    public override func log(detail: LogDetail) {
 
         if outputStream == nil {
             return
         }
         
-        var output: String = ""
-
-        if showLogLevel {
-            if let level = detail.level {
-                output += "[\(LogLevel(rawValue: level).description)] "
-            }
-        }
-
-        if showTimestamp {
-            if let date = detail.date {
-                output += "[\(dateFormatter.stringFromDate(date))] "
-            }
-        }
-
-        if showCaller {
-            if let filename = detail.filename, line = detail.line, function = detail.function {
-                output += "(\(function), \((filename as NSString).lastPathComponent):\(line)) "
-            }
-        }
-
-        output += ": "
-
-        if let message = detail.message {
-            output += message
-        }
-
-        output += "\n"
-
-        outputStream?.write(output)
+        outputStream?.write(formatted(detail))
     }
 }
 
