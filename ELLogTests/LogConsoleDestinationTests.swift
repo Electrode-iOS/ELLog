@@ -17,10 +17,13 @@ class LogConsoleDestinationTests: XCTestCase {
         super.setUp()
         
         logDetailMock.date = NSDate(timeIntervalSince1970: 0)
-        logDetailMock.message = "Let there be light."
+        logDetailMock.message = "I am log."
         logDetailMock.filename = "TestFolder/TestFilename.swift"
         logDetailMock.line = 42
         logDetailMock.function = "testFunction"
+        
+        let logConsoleDestination = LogConsoleDestination()
+        logConsoleDestination.dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT")
     }
     
     override func tearDown() {
@@ -46,28 +49,28 @@ class LogConsoleDestinationTests: XCTestCase {
         XCTAssertTrue(logConsoleDestination.showLogLevel)
         XCTAssertFalse(logConsoleDestination.showTimestamp)
         
-        let expectedLogString = ": Let there be light."
+        let expectedLogString = ": I am log."
         XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
     }
     
     func testLogConsoleDestinationLevel() {
         let logConsoleDestination = LogConsoleDestination()
         logDetailMock.level = LogLevel.Verbose.rawValue
-        let expectedLogString = "[VERBOSE] : Let there be light."
+        let expectedLogString = "[VERBOSE] : I am log."
         XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
     }
     
     func testLogConsoleDestinationCaller() {
         let logConsoleDestination = LogConsoleDestination()
         logConsoleDestination.showCaller = true
-        let expectedLogString = "(testFunction, TestFilename.swift:42) : Let there be light."
+        let expectedLogString = "(testFunction, TestFilename.swift:42) : I am log."
         XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
     }
     
     func testLogConsoleDestinationTimestamp() {
         let logConsoleDestination = LogConsoleDestination()
         logConsoleDestination.showTimestamp = true
-        let expectedLogString = "[1969-12-31 16:00:00.000] : Let there be light."
+        let expectedLogString = "[1970-01-01 00:00:00.000] : I am log."
         XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
     }
     
@@ -76,7 +79,7 @@ class LogConsoleDestinationTests: XCTestCase {
         logConsoleDestination.showCaller = true
         logConsoleDestination.showTimestamp = true
         logDetailMock.level = LogLevel.Verbose.rawValue
-        let expectedLogString = "[VERBOSE] [1969-12-31 16:00:00.000] (testFunction, TestFilename.swift:42) : Let there be light."
+        let expectedLogString = "[VERBOSE] [1970-01-01 00:00:00.000] (testFunction, TestFilename.swift:42) : I am log."
         logConsoleDestination.log(logDetailMock)
         XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
     }
