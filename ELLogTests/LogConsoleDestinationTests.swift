@@ -50,28 +50,28 @@ class LogConsoleDestinationTests: XCTestCase {
         XCTAssertFalse(logConsoleDestination.showTimestamp)
         
         let expectedLogString = ": I am log."
-        XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
+        XCTAssert(logConsoleDestination.formatted(logDetailMock) == expectedLogString)
     }
     
     func testLogConsoleDestinationLevel() {
         let logConsoleDestination = LogConsoleDestination()
         logDetailMock.level = LogLevel.Verbose.rawValue
         let expectedLogString = "[VERBOSE] : I am log."
-        XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
+        XCTAssert(logConsoleDestination.formatted(logDetailMock) == expectedLogString)
     }
     
     func testLogConsoleDestinationCaller() {
         let logConsoleDestination = LogConsoleDestination()
         logConsoleDestination.showCaller = true
         let expectedLogString = "(testFunction, TestFilename.swift:42) : I am log."
-        XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
+        XCTAssert(logConsoleDestination.formatted(logDetailMock) == expectedLogString)
     }
     
     func testLogConsoleDestinationTimestamp() {
         let logConsoleDestination = LogConsoleDestination()
         logConsoleDestination.showTimestamp = true
         let expectedLogString = "[1970-01-01 00:00:00.000] : I am log."
-        XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
+        XCTAssert(logConsoleDestination.formatted(logDetailMock) == expectedLogString)
     }
     
     func testLogConsoleDestinationShowAll() {
@@ -81,6 +81,6 @@ class LogConsoleDestinationTests: XCTestCase {
         logDetailMock.level = LogLevel.Verbose.rawValue
         let expectedLogString = "[VERBOSE] [1970-01-01 00:00:00.000] (testFunction, TestFilename.swift:42) : I am log."
         logConsoleDestination.log(logDetailMock)
-        XCTAssert(logConsoleDestination.formattedLogString(logDetailMock) == expectedLogString)
+        XCTAssert(logConsoleDestination.formatted(logDetailMock) == expectedLogString)
     }
 }

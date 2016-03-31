@@ -19,46 +19,23 @@ The default behavior is:
     showTimestamp = false
 */
 @objc(ELLogConsoleDestination)
-public class LogConsoleDestination: LogDestinationBase, LogDestinationProtocol {
+public class LogConsoleDestination: LogDestinationBase {
 
-    // LogDestinationProtocol compliance
-    public var showCaller: Bool = false
-    public var showLogLevel: Bool = true
-    public var showTimestamp: Bool = false
-
-    public func log(detail: LogDetail) {
-        NSLog(formattedLogString(detail))
+    public override init(level: LogLevel) {
+        super.init(level: level)
+        showCaller = false
+        showLogLevel = true
+        showTimestamp = false
     }
     
-    internal func formattedLogString(detail: LogDetail) -> String {
-        var logString: String = ""
-        
-        if showLogLevel {
-            if let level = detail.level {
-                logString += "[\(LogLevel(rawValue: level).description)] "
-            }
-        }
-        
-        if showTimestamp {
-            if let date = detail.date {
-                logString += "[\(dateFormatter.stringFromDate(date))] "
-            }
-        }
-        
-        if showCaller {
-            if let filename = detail.filename, line = detail.line, function = detail.function {
-                logString += "(\(function), \((filename as NSString).lastPathComponent):\(line)) "
-            }
-        }
-        
-        logString += ": "
-        
-        if let message = detail.message {
-            logString += message
-        }
-        
-        return logString
+    public convenience init() {
+        self.init(level: .Debug)
     }
+    
+    public override func log(detail: LogDetail) {
+        NSLog(formatted(detail))
+    }
+    
 }
 
 
