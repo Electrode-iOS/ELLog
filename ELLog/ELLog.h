@@ -6,7 +6,10 @@
 //  Copyright (c) 2015 WalmartLabs. All rights reserved.
 //
 
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#endif
+
 #import "Logger-Objc.h"
 
 //! Project version number for ELLog.
