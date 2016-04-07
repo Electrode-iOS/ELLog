@@ -56,8 +56,9 @@ public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtoc
             output += message
         }
 
-        let emptyPointer = CVaListPointer(_fromUnsafeMutablePointer: nil)
-        CLSLogv(output, emptyPointer)
+        withVaList([]) { (pointer: CVaListPointer) in
+            CLSLogv(output, pointer)
+        }
     }
 }
 
