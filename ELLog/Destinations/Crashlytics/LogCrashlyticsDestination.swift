@@ -56,9 +56,7 @@ public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtoc
             output += message
         }
 
-        withVaList([]) { (pointer: CVaListPointer) in
-            CLSLogv(output, pointer)
-        }
+        CLSLogv("%@", getVaList([output]))
     }
 }
 
