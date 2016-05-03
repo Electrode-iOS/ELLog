@@ -109,7 +109,7 @@ public class Logger: NSObject {
     /**
     Dispatches the provided log information to the logging destination.
     */
-    public func log(level: LogLevel, message: String, function: String = __FUNCTION__, filename: String = __FILE__, line: UInt = __LINE__) {
+    public func log(level: LogLevel, message: String, function: String = #function, filename: String = #file, line: UInt = #line) {
         let detail = LogDetail()
         detail.date = NSDate()
         detail.message = message
