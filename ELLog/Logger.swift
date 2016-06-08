@@ -34,7 +34,7 @@ public struct LogLevel: OptionSetType, BooleanType, CustomStringConvertible {
 
     /// Returns a string representation of the current logging level(s).
     public var description: String {
-        var options: Array<String> = []
+        var options: [String] = []
 
         if self == .None {
             return "NONE"
@@ -195,7 +195,11 @@ public class Logger: NSObject {
         }
     }
 
-    private var destinations = Dictionary<String, LogDestinationProtocol>()
+    internal func destinationsForTesting() -> [String: LogDestinationProtocol] {
+        return destinations
+    }
+    
+    private var destinations = [String: LogDestinationProtocol]()
 }
 
 

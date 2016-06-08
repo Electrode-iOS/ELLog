@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA8D47BA1AAE6FF50028B74D"
+               BlueprintIdentifier = "CA24104F1AF966F600AA4410"
                BuildableName = "ELLog.framework"
-               BlueprintName = "ELLog"
-               ReferencedContainer = "container:ELLog.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA8D47C51AAE6FF50028B74D"
-               BuildableName = "ELLogTests.xctest"
-               BlueprintName = "ELLogTests"
+               BlueprintName = "ELLog_osx"
                ReferencedContainer = "container:ELLog.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,29 +26,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA8D47C51AAE6FF50028B74D"
-               BuildableName = "ELLogTests.xctest"
-               BlueprintName = "ELLogTests"
-               ReferencedContainer = "container:ELLog.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA8D47BA1AAE6FF50028B74D"
-            BuildableName = "ELLog.framework"
-            BlueprintName = "ELLog"
-            ReferencedContainer = "container:ELLog.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -79,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA8D47BA1AAE6FF50028B74D"
+            BlueprintIdentifier = "CA24104F1AF966F600AA4410"
             BuildableName = "ELLog.framework"
-            BlueprintName = "ELLog"
+            BlueprintName = "ELLog_osx"
             ReferencedContainer = "container:ELLog.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -97,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA8D47BA1AAE6FF50028B74D"
+            BlueprintIdentifier = "CA24104F1AF966F600AA4410"
             BuildableName = "ELLog.framework"
-            BlueprintName = "ELLog"
+            BlueprintName = "ELLog_osx"
             ReferencedContainer = "container:ELLog.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
