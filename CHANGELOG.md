@@ -1,3 +1,7 @@
+# [2.0.0](https://github.com/Electrode-iOS/ELDispatch/releases/tag/v2.0.0)
+
+- Updated for Swift 2.2 and Xcode 7.3 compatibility
+
 # [1.0.0](https://github.com/Electrode-iOS/ELLog/releases/tag/v1.0.0)
 
 - Namespaced all log levels with "EL".

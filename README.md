@@ -1,4 +1,7 @@
-# ELLog [![Build Status](https://travis-ci.org/Electrode-iOS/ELLog.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELLog)
+# ELLog 
+
+[![Version](https://img.shields.io/badge/version-v2.0.0-blue.svg)](https://github.com/Electrode-iOS/ELLog/releases/latest)
+[![Build Status](https://travis-ci.org/Electrode-iOS/ELLog.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELLog)
 
 ELLog is a framework that provides versatile logging options for Swift and Objective-C code.
 
