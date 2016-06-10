@@ -18,18 +18,20 @@ The default behavior is:
 
     level = .Debug,
     showCaller = true,
-    showLogLevel = false,
-    showTimestamp = false
+    showLogLevel = true,
+    showTimestamp = true
 */
 @objc(ELLogCrashlyticsDestination)
-public class LogCrashlyticsDestination: LogDestinationBase, LogDestinationProtocol {
+public class LogCrashlyticsDestination: LogDestinationBase {
 
-    // LogDestinationProtocol compliance
-    public var showCaller: Bool = true
-    public var showLogLevel: Bool = false
-    public var showTimestamp: Bool = false
+    public override init(level argLevel: LogLevel) {
+        super.init(level: argLevel)
+        showCaller = true
+        showLogLevel = true
+        showTimestamp = true
+    }
 
-    public func log(detail: LogDetail) {
+    public override func log(detail: LogDetail) {
         var output: String = ""
 
         if showLogLevel {
