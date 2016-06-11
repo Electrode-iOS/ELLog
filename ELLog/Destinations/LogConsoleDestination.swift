@@ -33,7 +33,10 @@ public class LogConsoleDestination: LogDestinationBase {
     }
     
     public override func log(detail: LogDetail) {
-        NSLog(formatted(detail))
+        let logString = formatted(detail)
+        // You must pass NSLog a format string and then pass the Swift string as a vaArg
+        // or the code will crash when it tries to format %f in the Swift string
+        NSLog("%@", logString)
     }
     
 }
