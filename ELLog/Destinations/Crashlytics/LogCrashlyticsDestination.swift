@@ -8,7 +8,7 @@
 
 import Foundation
 import ELLog
-//import Crashlytics
+import Crashlytics
 
 /* 
  
@@ -74,7 +74,7 @@ public class LogCrashlyticsDestination: ELLog.LogDestinationBase {
             output += message
         }
 
-        //CLSLogv("%@", getVaList([output]))
+        CLSLogv("%@", getVaList([output]))
     }
 }
 

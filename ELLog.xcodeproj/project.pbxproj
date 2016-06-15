@@ -30,7 +30,6 @@
 		CAB30F021AB6766C0021C342 /* Logger-Objc.h in Headers */ = {isa = PBXBuildFile; fileRef = CAB30F001AB6766C0021C342 /* Logger-Objc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAB30F031AB6766C0021C342 /* Logger-Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB30F011AB6766C0021C342 /* Logger-Objc.m */; };
 		CACE89221AC1CC78000FE30E /* LogDestinationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE89211AC1CC78000FE30E /* LogDestinationBase.swift */; };
-		CAEE8B691D11C160007BA82C /* LogCrashlyticsDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A819031C5AE73C00FC8480 /* LogCrashlyticsDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -359,7 +358,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA8332C21AAEC739003C9058 /* ELLogObjcTests.m in Sources */,
-				CAEE8B691D11C160007BA82C /* LogCrashlyticsDestination.swift in Sources */,
 				20C3E9201C64099A002BC2DA /* LogUnitTestDestination.swift in Sources */,
 				2238B6B81C9B6D1F00C3E813 /* LogConsoleDestinationTests.swift in Sources */,
 				CA8D47CE1AAE6FF50028B74D /* ELLogTests.swift in Sources */,
