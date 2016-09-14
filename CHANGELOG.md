@@ -1,3 +1,7 @@
+# [2.1.0](https://github.com/Electrode-iOS/ELLog/releases/tag/v2.1.0)
+
+- Add support for Xcode 8, Swift 2.3, and iOS SDK 10
+
 # [2.0.4](https://github.com/Electrode-iOS/ELLog/releases/tag/v2.0.4)
 
 - Disable `EMBEDDED_CONTENT_CONTAINS_SWIFT` build configuration. Frameworks are not allowed to have this enabled when submitting to Apple.
