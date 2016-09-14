@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode8
 
 script:
-   - xctool -project ELLog.xcodeproj -scheme ELLog -sdk iphonesimulator build test
+   - xcodebuild -project ELLog.xcodeproj -scheme ELLog -sdk iphonesimulator test -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0'
