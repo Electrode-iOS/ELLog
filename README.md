@@ -2,12 +2,27 @@
 
 [![Version](https://img.shields.io/badge/version-v2.1.0-blue.svg)](https://github.com/Electrode-iOS/ELLog/releases/latest)
 [![Build Status](https://travis-ci.org/Electrode-iOS/ELLog.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELLog)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ELLog is a framework that provides versatile logging options for Swift and Objective-C code.
 
 ## Requirements
 
 ELLog requires Swift 2.3 and Xcode 8.
+
+## Installation
+
+### Carthage
+
+Install with [Carthage](https://github.com/Carthage/Carthage) by adding the framework to your project's [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
+
+```
+github "Electrode-iOS/ELLog" ~> 2.1.0
+```
+
+### Manual
+
+Install manually by adding `ELLog.xcodeproj` to your project and configuring your target to link `ELLog.framework`.
 
 ## Introduction
 
@@ -100,33 +115,3 @@ Logger *myLogger = [[Logger alloc] init];
 
 ELLogCustom(myLogger, LogLevelError, @"value = %@", @1);
 ```
-
-## Contributions
-
-We appreciate your contributions to all of our projects and look forward to interacting with you via Pull Requests, the issue tracker, via Twitter, etc.  We're happy to help you, and to have you help us.  We'll strive to answer every PR and issue and be very transparent in what we do.
-
-When contributing code, please refer to our [Dennis](https://github.com/Electrode-iOS/Dennis).
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2015 Walmart, WalmartLabs, and other Contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
