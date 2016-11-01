@@ -129,6 +129,7 @@ open class Logger: NSObject {
     - parameter destination: The destination to add.
     - returns: the identifier of the destination.  Useful for later lookup.
     */
+    @discardableResult
     open func addDestination(_ destination: LogDestinationProtocol) -> String {
         destinations[destination.identifier] = destination
         return destination.identifier

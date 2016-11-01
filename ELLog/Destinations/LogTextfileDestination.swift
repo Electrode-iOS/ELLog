@@ -61,7 +61,8 @@ open class LogTextfileDestination: LogDestinationBase {
 
 
 extension OutputStream {
-
+    
+    @discardableResult
     func write(_ string: String, encoding: String.Encoding = String.Encoding.utf8, allowLossyConversion: Bool = true) -> Int {
         if let data = string.data(using: encoding, allowLossyConversion: allowLossyConversion) {
             var bytes = (data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count)
