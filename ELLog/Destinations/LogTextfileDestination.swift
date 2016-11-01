@@ -20,17 +20,17 @@ The default behavior is:
     showTimestamp = true
 */
 @objc(ELLogTextfileDestination)
-public class LogTextfileDestination: LogDestinationBase {
+open class LogTextfileDestination: LogDestinationBase {
 
-    private let filename: String
-    private let outputStream: NSOutputStream?
+    fileprivate let filename: String
+    fileprivate let outputStream: OutputStream?
 
     public init(filename: String) {
         self.filename = filename
 
-        let folder = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] 
-        let path = (folder as NSString).stringByAppendingPathComponent(filename)
-        outputStream = NSOutputStream(toFileAtPath: path, append: true)
+        let folder = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] 
+        let path = (folder as NSString).appendingPathComponent(filename)
+        outputStream = OutputStream(toFileAtPath: path, append: true)
 
         if let outputStream = outputStream {
             outputStream.open()
@@ -49,7 +49,7 @@ public class LogTextfileDestination: LogDestinationBase {
         outputStream?.close()
     }
 
-    public override func log(detail: LogDetail) {
+    open override func log(_ detail: LogDetail) {
 
         if outputStream == nil {
             return
@@ -60,12 +60,12 @@ public class LogTextfileDestination: LogDestinationBase {
 }
 
 
-extension NSOutputStream {
+extension OutputStream {
 
-    func write(string: String, encoding: NSStringEncoding = NSUTF8StringEncoding, allowLossyConversion: Bool = true) -> Int {
-        if let data = string.dataUsingEncoding(encoding, allowLossyConversion: allowLossyConversion) {
-            var bytes = UnsafePointer<UInt8>(data.bytes)
-            var bytesRemaining = data.length
+    func write(_ string: String, encoding: String.Encoding = String.Encoding.utf8, allowLossyConversion: Bool = true) -> Int {
+        if let data = string.data(using: encoding, allowLossyConversion: allowLossyConversion) {
+            var bytes = (data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count)
+            var bytesRemaining = data.count
             var totalBytesWritten = 0
 
             while bytesRemaining > 0 {

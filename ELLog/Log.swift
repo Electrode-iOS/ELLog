@@ -14,7 +14,7 @@ Convenicen function to post logs to the default logging mechanism.
 - parameter level: The log level.
 - parameter message: The message to display.
 */
-public func log(level: LogLevel, _ message: String) {
+public func log(_ level: LogLevel, _ message: String) {
     Logger.defaultInstance.log(level, message: message)
 }
 

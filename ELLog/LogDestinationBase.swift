@@ -17,7 +17,7 @@ public protocol LogDestinationProtocol: class {
 
     - parameter detail: Detailed information about the log statement.
     */
-    func log(detail: LogDetail)
+    func log(_ detail: LogDetail)
     
     /**
     A unique identifier representing this destination.
@@ -42,7 +42,7 @@ public protocol LogDestinationFormattible: class {
     var showTimestamp: Bool { get set }
     
     /// The dateformatter that will be used to format the timestamp.
-    var dateFormatter: NSDateFormatter { get }
+    var dateFormatter: DateFormatter { get }
     
     /**
      Converts a `LogDetail` into a formatted string based on the current properties.
@@ -51,29 +51,29 @@ public protocol LogDestinationFormattible: class {
      - parameter detail: The `LogDetail` that to be formatted for the destination.
      - returns: The formatted string.
      */
-    func formatted(detail: LogDetail) -> String
+    func formatted(_ detail: LogDetail) -> String
 }
 
 /// A struct describing a log message in detail.
 @objc(ELLogDetail)
-public class LogDetail: NSObject {
+open class LogDetail: NSObject {
     /// The date at which the log call was made.  Note: This will never be an exact time, but approximate.
-    public var date: NSDate? = nil
+    open var date: Date? = nil
     
     /// The message.
-    public var message: String? = nil
+    open var message: String? = nil
     
     /// The level at which this was logged.
-    public var level: UInt? = .None
+    open var level: UInt? = .none
     
     /// The function in which log was called.
-    public var function: String? = nil
+    open var function: String? = nil
     
     /// The filename in which log was called.
-    public var filename: String? = nil
+    open var filename: String? = nil
     
     /// The line number which called log.
-    public var line: UInt? = nil
+    open var line: UInt? = nil
 }
 
 /**
@@ -83,16 +83,16 @@ Provides a default identifier (a GUID), a default level of .Debug, and a date fo
 use with output timestamps.
 */
 @objc(ELLogDestinationBase)
-public class LogDestinationBase: NSObject, LogDestinationProtocol, LogDestinationFormattible {
+open class LogDestinationBase: NSObject, LogDestinationProtocol, LogDestinationFormattible {
     
-    private static let DateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+    fileprivate static let DateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     
     public init(level: LogLevel) {
         self.level = level.rawValue
         showCaller = false
         showLogLevel = false
         showTimestamp = false
-        dateFormatter = NSThread.dateFormatter_ELLog(LogDestinationBase.DateFormat)
+        dateFormatter = Thread.dateFormatter_ELLog(LogDestinationBase.DateFormat)
     }
 
     public override convenience init() {
@@ -100,21 +100,21 @@ public class LogDestinationBase: NSObject, LogDestinationProtocol, LogDestinatio
     }
 
     // MARK: LogDestinationProtocol
-    public var identifier: String = NSUUID().UUIDString
-    public var level: UInt
+    open var identifier: String = UUID().uuidString
+    open var level: UInt
     
     /// Subclasses must override
-    public func log(detail: LogDetail) {
+    open func log(_ detail: LogDetail) {
         assert(false, "This method must be overriden by the subclass.")
     }
 
     // MARK: LogDestinationFormattible
-    public var showCaller: Bool
-    public var showLogLevel: Bool
-    public var showTimestamp: Bool
-    public var dateFormatter: NSDateFormatter
+    open var showCaller: Bool
+    open var showLogLevel: Bool
+    open var showTimestamp: Bool
+    open var dateFormatter: DateFormatter
     
-    public func formatted(detail: LogDetail) -> String {
+    open func formatted(_ detail: LogDetail) -> String {
         var logString: String = ""
         
         if showLogLevel {
@@ -125,12 +125,12 @@ public class LogDestinationBase: NSObject, LogDestinationProtocol, LogDestinatio
         
         if showTimestamp {
             if let date = detail.date {
-                logString += "[\(dateFormatter.stringFromDate(date))] "
+                logString += "[\(dateFormatter.string(from: date))] "
             }
         }
         
         if showCaller {
-            if let filename = detail.filename, line = detail.line, function = detail.function {
+            if let filename = detail.filename, let line = detail.line, let function = detail.function {
                 logString += "(\(function), \((filename as NSString).lastPathComponent):\(line)) "
             }
         }

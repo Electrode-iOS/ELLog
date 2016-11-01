@@ -16,14 +16,14 @@ class LogConsoleDestinationTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        logDetailMock.date = NSDate(timeIntervalSince1970: 0)
+        logDetailMock.date = Date(timeIntervalSince1970: 0)
         logDetailMock.message = "I am log."
         logDetailMock.filename = "TestFolder/TestFilename.swift"
         logDetailMock.line = 42
         logDetailMock.function = "testFunction"
         
         let logConsoleDestination = LogConsoleDestination()
-        logConsoleDestination.dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT")
+        logConsoleDestination.dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
     }
     
     override func tearDown() {
@@ -38,7 +38,7 @@ class LogConsoleDestinationTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
