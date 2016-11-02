@@ -21,8 +21,8 @@
 
     //ELLogDebug(@"got log?  %@", @YES);
 
-    Logger *logger = Logger.defaultInstance;
-    [LoggerObjc log:logger logLevel:LogLevelDebug function:@"function" filename:@"file.m" line:100 format:@"got log? = %@, did you like it? %s", @YES, "yayussss..."];
+    ELLogger *logger = ELLogger.defaultInstance;
+    [ELLoggerObjc log:logger logLevel:ELLogLevelDebug function:@"function" filename:@"file.m" line:100 format:@"got log? = %@, did you like it? %s", @YES, "yayussss..."];
 }
 
 - (void)didReceiveMemoryWarning {
