@@ -20,7 +20,7 @@ The default behavior is:
     showTimestamp = true
 */
 @objc(ELLogTextfileDestination)
-open class LogTextfileDestination: LogDestinationBase {
+public class LogTextfileDestination: LogDestinationBase {
 
     fileprivate let filename: String
     fileprivate let outputStream: OutputStream?
@@ -28,7 +28,7 @@ open class LogTextfileDestination: LogDestinationBase {
     public init(filename: String) {
         self.filename = filename
 
-        let folder = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] 
+        let folder = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         let path = (folder as NSString).appendingPathComponent(filename)
         outputStream = OutputStream(toFileAtPath: path, append: true)
 
@@ -39,7 +39,7 @@ open class LogTextfileDestination: LogDestinationBase {
         }
 
         super.init(level: .Debug)
-        
+
         showCaller = false
         showLogLevel = true
         showTimestamp = true
@@ -49,19 +49,19 @@ open class LogTextfileDestination: LogDestinationBase {
         outputStream?.close()
     }
 
-    open override func log(_ detail: LogDetail) {
+    public override func log(_ detail: LogDetail) {
 
         if outputStream == nil {
             return
         }
-        
+
         outputStream?.write(formatted(detail))
     }
 }
 
 
 extension OutputStream {
-    
+
     @discardableResult
     func write(_ string: String, encoding: String.Encoding = String.Encoding.utf8, allowLossyConversion: Bool = true) -> Int {
         if let data = string.data(using: encoding, allowLossyConversion: allowLossyConversion) {
@@ -82,8 +82,8 @@ extension OutputStream {
 
             return totalBytesWritten
         }
-        
+
         return -1
     }
-    
+
 }
