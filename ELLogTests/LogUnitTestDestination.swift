@@ -15,10 +15,10 @@ Defines a log destination that captures the last LogDetail logged.
 
  */
 @objc(ELLogUnitTestDestination)
-public class LogUnitTestDestination: LogDestinationBase {
+open class LogUnitTestDestination: LogDestinationBase {
     
     /// The last LogDetail logged through this destination
-    public var lastLogDetail: LogDetail = LogDetail()
+    open var lastLogDetail: LogDetail = LogDetail()
 
     public convenience init() {
         self.init(level: LogLevel.Debug)
@@ -27,7 +27,7 @@ public class LogUnitTestDestination: LogDestinationBase {
         showTimestamp = false
     }
 
-    public override func log(detail: LogDetail) {
+    open override func log(_ detail: LogDetail) {
         lastLogDetail = detail
     }
     
