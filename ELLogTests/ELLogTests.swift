@@ -40,9 +40,7 @@ class ELLogTests: XCTestCase {
         
         let testMessage = "hello \(number)"
         let testLogLevel: LogLevel = [.Debug, .Info]
-        
-        XCTAssert(testLogLevel.boolValue == true)
-        
+
         logger.log(testLogLevel, message: testMessage)
         XCTAssert(unitTestDestination.lastLogDetail.level == testLogLevel.rawValue)
         XCTAssert(unitTestDestination.lastLogDetail.message == testMessage)

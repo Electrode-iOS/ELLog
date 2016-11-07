@@ -14,21 +14,21 @@ Logging Level option flags.
 public struct LogLevel: OptionSet, CustomStringConvertible {
     /// Logging disabled.
     public let rawValue: UInt
-    
+
     public static let None = LogLevel(rawValue: 0)
-    
+
     /// Error logging enabled.
     public static let Error = LogLevel(rawValue: 1 << 0)
-    
+
     /// Debug logging enabled.
     public static let Debug = LogLevel(rawValue: 1 << 1)
-    
+
     /// Info logging enabled.
     public static let Info = LogLevel(rawValue: 1 << 2)
-    
+
     /// Verbose logging enabled.
     public static let Verbose = LogLevel(rawValue: 1 << 3)
-    
+
     /// All logging enabled.
     public static let All:LogLevel = [.Error, .Debug, .Info, .Verbose]
 
@@ -39,11 +39,11 @@ public struct LogLevel: OptionSet, CustomStringConvertible {
         if self == .None {
             return "NONE"
         }
-        
+
         if contains(LogLevel.All) {
             return "ALL"
         }
-        
+
         if contains(.Error) {
             options.append("ERROR")
         }
@@ -64,9 +64,6 @@ public struct LogLevel: OptionSet, CustomStringConvertible {
     }
 
     public init(rawValue: UInt) { self.rawValue = rawValue }
-    //todo WARNING BooleanType has been removed
-    // BooleanType
-    public var boolValue: Bool { return rawValue  != 0 }
 }
 
 /**
@@ -81,7 +78,7 @@ open class Logger: NSObject {
     The default logger instance.  This is typically a LogConsoleDestination with a log level of .Debug.
     */
     open static let defaultInstance = loggerDefault()
-    
+
     /**
     Allows this logger to be enabled/disabled.
     */
@@ -99,7 +96,7 @@ open class Logger: NSObject {
         }
     }
     fileprivate var _enabled = true
-    
+
     public override init() {
         super.init()
         let console = LogConsoleDestination(level: [.Debug, .Error])
@@ -125,7 +122,7 @@ open class Logger: NSObject {
     Add a new destination to this Logger instance.  This appends another destination
     to the list.  Only messages with a log level matching what this destination consumes
     will be sent here.
-    
+
     - parameter destination: The destination to add.
     - returns: the identifier of the destination.  Useful for later lookup.
     */
@@ -155,7 +152,7 @@ open class Logger: NSObject {
     open func destination(_ identifier: String) -> LogDestinationProtocol? {
         return destinations[identifier]
     }
-    
+
     /**
     Don't call this.  This is purely for interacting with the objective-c interface to this class.
     */
@@ -176,7 +173,7 @@ open class Logger: NSObject {
         if !enabled {
             return
         }
-        
+
         // cycle through the destinations and start writing.
         for destination in destinations.values {
             if let rawLevel = detail.level {
@@ -199,7 +196,7 @@ open class Logger: NSObject {
     internal func destinationsForTesting() -> [String: LogDestinationProtocol] {
         return destinations
     }
-    
+
     fileprivate var destinations = [String: LogDestinationProtocol]()
 }
 

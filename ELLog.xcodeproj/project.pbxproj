@@ -273,6 +273,9 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = WalmartLabs;
 				TargetAttributes = {
+					CA24104F1AF966F600AA4410 = {
+						LastSwiftMigration = 0810;
+					};
 					CA8D47BA1AAE6FF50028B74D = {
 						CreatedOnToolsVersion = 6.3;
 						LastSwiftMigration = 0810;
@@ -396,6 +399,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -417,6 +421,7 @@
 				PRODUCT_NAME = ELLog;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -734,6 +739,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = QADeployment;
 		};

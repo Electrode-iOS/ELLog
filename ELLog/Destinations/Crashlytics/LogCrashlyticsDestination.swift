@@ -47,7 +47,7 @@ public class LogCrashlyticsDestination: ELLog.LogDestinationBase {
         showTimestamp = true
     }
 
-    public override func log(detail: ELLog.LogDetail) {
+    public override func log(_ detail: ELLog.LogDetail) {
         var output: String = ""
 
         if showLogLevel {
@@ -58,12 +58,12 @@ public class LogCrashlyticsDestination: ELLog.LogDestinationBase {
 
         if showTimestamp {
             if let date = detail.date {
-                output += "[\(dateFormatter.stringFromDate(date))] "
+                output += "[\(dateFormatter.string(from: date))] "
             }
         }
 
         if showCaller {
-            if let filename = detail.filename, line = detail.line, function = detail.function {
+            if let filename = detail.filename, let line = detail.line, let function = detail.function {
                 output += "(\(function), \((filename as NSString).lastPathComponent):\(line)) "
             }
         }
@@ -77,4 +77,3 @@ public class LogCrashlyticsDestination: ELLog.LogDestinationBase {
         CLSLogv("%@", getVaList([output]))
     }
 }
-
