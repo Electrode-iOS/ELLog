@@ -14,24 +14,24 @@ minimize dependencies. It is being renamed so that it can be used as source in p
 frameworks, e.g. command line apps.
 */
 
-extension NSThread {
+extension Thread {
 
-    static private let formatterCacheKey = "ELLog.Console.dateFormatter_ELLog"
+    static fileprivate let formatterCacheKey = "ELLog.Console.dateFormatter_ELLog"
 
-    class func dateFormatter_ELLog(format: String, locale: NSLocale = NSLocale.currentLocale()) -> NSDateFormatter {
-        let threadDictionary = NSThread.currentThread().threadDictionary
+    class func dateFormatter_ELLog(_ format: String, locale: Locale = Locale.current) -> DateFormatter {
+        let threadDictionary = Thread.current.threadDictionary
 
-        var cache: Dictionary<String, NSDateFormatter>? = threadDictionary.objectForKey(formatterCacheKey) as? Dictionary<String, NSDateFormatter>
+        var cache: Dictionary<String, DateFormatter>? = threadDictionary.object(forKey: formatterCacheKey) as? Dictionary<String, DateFormatter>
         if cache == nil {
-            cache = Dictionary<String, NSDateFormatter>()
+            cache = Dictionary<String, DateFormatter>()
         }
 
-        let formatKey = "\(format)_\(locale.localeIdentifier)"
+        let formatKey = "\(format)_\(locale.identifier)"
         if let existing = cache?[formatKey] {
             return existing
         }
 
-        let result = NSDateFormatter()
+        let result = DateFormatter()
         result.locale = locale
         result.dateFormat = format
         cache?[formatKey] = result

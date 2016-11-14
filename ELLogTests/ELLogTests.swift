@@ -23,8 +23,8 @@ class ELLogTests: XCTestCase {
     }
     
     
-    func runTestsOn(logger: Logger) {
-        let number = NSNumber(integer: 1234)
+    func runTestsOn(_ logger: Logger) {
+        let number = NSNumber(value: 1234 as Int)
         
         logger.removeAllDestinations()
         
@@ -40,9 +40,7 @@ class ELLogTests: XCTestCase {
         
         let testMessage = "hello \(number)"
         let testLogLevel: LogLevel = [.Debug, .Info]
-        
-        XCTAssert(testLogLevel.boolValue == true)
-        
+
         logger.log(testLogLevel, message: testMessage)
         XCTAssert(unitTestDestination.lastLogDetail.level == testLogLevel.rawValue)
         XCTAssert(unitTestDestination.lastLogDetail.message == testMessage)
