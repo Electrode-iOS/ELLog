@@ -1,3 +1,9 @@
+# [3.0.0](https://github.com/Electrode-iOS/ELLog/releases/tag/v3.0.0)
+
+- Migrate to Swift 3
+  - Remove conformance to BooleanType, since it does not exist anymore.
+  - Make `LogConsoleDestination` and `LogTextfileDestination` concrete.
+
 # [2.1.0](https://github.com/Electrode-iOS/ELLog/releases/tag/v2.1.0)
 
 - Add support for Xcode 8, Swift 2.3, and iOS SDK 10
