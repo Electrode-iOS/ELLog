@@ -43,7 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		20A819031C5AE73C00FC8480 /* LogCrashlyticsDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCrashlyticsDestination.swift; sourceTree = "<group>"; };
 		20C3E91F1C64099A002BC2DA /* LogUnitTestDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogUnitTestDestination.swift; sourceTree = "<group>"; };
 		2238B6B71C9B6D1F00C3E813 /* LogConsoleDestinationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogConsoleDestinationTests.swift; sourceTree = "<group>"; };
 		CA13BBD01AB8946400165813 /* LogTextfileDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTextfileDestination.swift; sourceTree = "<group>"; };
@@ -96,7 +95,6 @@
 		20A819001C5AE73C00FC8480 /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				20A819031C5AE73C00FC8480 /* LogCrashlyticsDestination.swift */,
 			);
 			path = Crashlytics;
 			sourceTree = "<group>";
