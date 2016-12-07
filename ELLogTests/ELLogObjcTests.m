@@ -28,15 +28,6 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    ELLogger *l = ELLogger.defaultInstance;
-    ELLogTextfileDestination *textfile = [[ELLogTextfileDestination alloc] initWithFilename:@"blah.txt"];
-    textfile.level = ELLogLevelError;
-
-    [l addDestination:textfile];
-    ELLog(ELLogLevelDebug, @"value = %@, do you like it?  %@", @1, @"Yayusss...");
-}
-
 
 - (void) runTestsOn:(ELLogger *)logger {
     NSNumber *number = [NSNumber numberWithInt:1234];

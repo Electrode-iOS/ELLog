@@ -89,24 +89,6 @@ log(.Debug | .Error, "We shall say 'nee' again to you if you do not appease us."
 ```
 or...
 ```Objc
-LogTextfileDestination *gardenStore = [[LogTextfileDestination alloc] initWithFilename:@"errors.txt"];
-gardenStore.level = LogLevelError;
-
-[Logger.defaultInstance addDestination:gardenStore];
-
-...
-
-ELLog(ELLogLevelError, @"value = %@", @1);
-
-// or ...
-
-ELLogError(@"value = %@", @1);
-```
-
-Use a custom logging instance in Objective-C:
-```Objc
-LogTextfileDestination *gardenStore = [[LogTextfileDestination alloc] initWithFilename:@"errors.txt"];
-gardenStore.level = LogLevelError;
 
 Logger *myLogger = [[Logger alloc] init];
 [myLogger addDestination:gardenStore];
