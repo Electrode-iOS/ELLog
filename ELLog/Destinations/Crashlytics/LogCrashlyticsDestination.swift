@@ -38,7 +38,7 @@ The default behavior is:
     showTimestamp = true
 */
 @objc(ELLogCrashlyticsDestination)
-public class LogCrashlyticsDestination: ELLog.LogDestinationBase {
+open class LogCrashlyticsDestination: ELLog.LogDestinationBase {
 
     public override init(level argLevel: ELLog.LogLevel) {
         super.init(level: argLevel)
@@ -47,7 +47,7 @@ public class LogCrashlyticsDestination: ELLog.LogDestinationBase {
         showTimestamp = true
     }
 
-    public override func log(_ detail: ELLog.LogDetail) {
+    open override func log(_ detail: ELLog.LogDetail) {
         var output: String = ""
 
         if showLogLevel {
