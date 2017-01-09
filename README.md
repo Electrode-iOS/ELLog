@@ -1,6 +1,6 @@
 # ELLog 
 
-[![Version](https://img.shields.io/badge/version-v3.0.0-blue.svg)](https://github.com/Electrode-iOS/ELLog/releases/latest)
+[![Version](https://img.shields.io/badge/version-v4.0.0-blue.svg)](https://github.com/Electrode-iOS/ELLog/releases/latest)
 [![Build Status](https://travis-ci.org/Electrode-iOS/ELLog.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELLog)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
@@ -17,7 +17,7 @@ ELLog requires Swift 3 and Xcode 8.1.
 Install with [Carthage](https://github.com/Carthage/Carthage) by adding the framework to your project's [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
 
 ```
-github "Electrode-iOS/ELLog" ~> 3.0.0
+github "Electrode-iOS/ELLog" ~> 4.0.0
 ```
 
 ### Manual
