@@ -79,6 +79,10 @@ class ELLogTests: XCTestCase {
         XCTAssertFalse(level.contains(LogLevel.All))
         
         XCTAssertTrue(level.contains(.Info))
+        
+        XCTAssertTrue(LogLevel.Error.rawValue < LogLevel.Info.rawValue)
+        XCTAssertTrue(LogLevel.Info.rawValue < LogLevel.Debug.rawValue)
+        XCTAssertTrue(LogLevel.Debug.rawValue < LogLevel.Verbose.rawValue)
     }
     
 }

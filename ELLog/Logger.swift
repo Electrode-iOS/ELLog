@@ -20,11 +20,11 @@ public struct LogLevel: OptionSet, CustomStringConvertible {
     /// Error logging enabled.
     public static let Error = LogLevel(rawValue: 1 << 0)
 
-    /// Debug logging enabled.
-    public static let Debug = LogLevel(rawValue: 1 << 1)
-
     /// Info logging enabled.
-    public static let Info = LogLevel(rawValue: 1 << 2)
+    public static let Info = LogLevel(rawValue: 1 << 1)
+    
+    /// Debug logging enabled.
+    public static let Debug = LogLevel(rawValue: 1 << 2)
 
     /// Verbose logging enabled.
     public static let Verbose = LogLevel(rawValue: 1 << 3)

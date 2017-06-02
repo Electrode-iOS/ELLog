@@ -11,8 +11,8 @@
 typedef NS_ENUM(NSUInteger, ELLogLevel) {
     ELLogLevelNone = 0,
     ELLogLevelError = 1 << 0,
-    ELLogLevelDebug = 1 << 1,
-    ELLogLevelInfo = 1 << 2,
+    ELLogLevelInfo = 1 << 1,
+    ELLogLevelDebug = 1 << 2,
     ELLogLevelVerbose = 1 << 3,
     ELLogLevelAll = ELLogLevelError | ELLogLevelDebug | ELLogLevelInfo | ELLogLevelVerbose
 };
