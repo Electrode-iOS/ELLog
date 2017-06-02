@@ -1,3 +1,7 @@
+# [4.0.1](https://github.com/Electrode-iOS/ELLog/releases/tag/v4.0.1)
+
+- Log levels were incorrect. Info should not be more permissive than Debug.
+
 # [4.0.0](https://github.com/Electrode-iOS/ELLog/releases/tag/v4.0.0)
 
 - Removed `LogCrashlyticsDestination` class. `LogCrashlyticsDestination` is not built as part of the ELLog target because it would create a dependency on Crashlytics. Since using this file requires a user to manually add it to their project, as well as install Crashlytics, the file is being removed from ELLog entirely.
