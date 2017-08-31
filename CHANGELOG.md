@@ -1,3 +1,7 @@
+# [4.0.2](https://github.com/Electrode-iOS/ELLog/releases/tag/v4.0.2)
+
+- Use default settings for bitcode
+
 # [4.0.1](https://github.com/Electrode-iOS/ELLog/releases/tag/v4.0.1)
 
 - Log levels were incorrect. Info should not be more permissive than Debug.
