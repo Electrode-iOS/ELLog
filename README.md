@@ -1,6 +1,5 @@
 # ELLog 
 
-[![Version](https://img.shields.io/badge/version-v4.0.2-blue.svg)](https://github.com/Electrode-iOS/ELLog/releases/latest)
 [![Build Status](https://travis-ci.org/Electrode-iOS/ELLog.svg?branch=master)](https://travis-ci.org/Electrode-iOS/ELLog)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
@@ -8,7 +7,7 @@ ELLog is a framework that provides versatile logging options for Swift and Objec
 
 ## Requirements
 
-ELLog requires Swift 3.1 and Xcode 8.3.
+ELLog requires Swift 4 and Xcode 9.2.
 
 ## Installation
 
@@ -17,7 +16,7 @@ ELLog requires Swift 3.1 and Xcode 8.3.
 Install with [Carthage](https://github.com/Carthage/Carthage) by adding the framework to your project's [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
 
 ```
-github "Electrode-iOS/ELLog" ~> 4.0.2
+github "Electrode-iOS/ELLog"
 ```
 
 ### Manual

@@ -1,3 +1,7 @@
+# [5.0.0](https://github.com/Electrode-iOS/ELLog/releases/tag/v5.0.0)
+
+- Migrate to Swift 4
+
 # [4.0.2](https://github.com/Electrode-iOS/ELLog/releases/tag/v4.0.2)
 
 - Use default settings for bitcode
