@@ -18,7 +18,7 @@ Defines a log destination that captures the last LogDetail logged.
 open class LogUnitTestDestination: LogDestinationBase {
     
     /// The last LogDetail logged through this destination
-    open var lastLogDetail: LogDetail = LogDetail()
+    @objc open var lastLogDetail: LogDetail = LogDetail()
 
     public convenience init() {
         self.init(level: LogLevel.Debug)
