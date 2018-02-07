@@ -61,7 +61,7 @@ open class LogDetail: NSObject {
     open var date: Date? = nil
     
     /// The message.
-    open var message: String? = nil
+    @objc open var message: String? = nil
     
     /// The level at which this was logged.
     open var level: UInt? = .none

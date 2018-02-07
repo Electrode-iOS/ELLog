@@ -25,7 +25,7 @@ public class LogTextfileDestination: LogDestinationBase {
     fileprivate let filename: String
     fileprivate let outputStream: OutputStream?
 
-    public init(filename: String) {
+    @objc public init(filename: String) {
         self.filename = filename
 
         let folder = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]

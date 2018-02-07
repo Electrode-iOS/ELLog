@@ -77,7 +77,7 @@ open class Logger: NSObject {
     /**
     The default logger instance.  This is typically a LogConsoleDestination with a log level of .Debug.
     */
-    open static let defaultInstance = loggerDefault()
+    @objc open static let defaultInstance = loggerDefault()
 
     /**
     Allows this logger to be enabled/disabled.
@@ -97,7 +97,7 @@ open class Logger: NSObject {
     }
     fileprivate var _enabled = true
 
-    public override init() {
+    @objc public override init() {
         super.init()
         let console = LogConsoleDestination(level: [.Debug, .Error])
         addDestination(console)
@@ -127,7 +127,7 @@ open class Logger: NSObject {
     - returns: the identifier of the destination.  Useful for later lookup.
     */
     @discardableResult
-    open func addDestination(_ destination: LogDestinationProtocol) -> String {
+    @objc open func addDestination(_ destination: LogDestinationProtocol) -> String {
         destinations[destination.identifier] = destination
         return destination.identifier
     }
@@ -135,28 +135,28 @@ open class Logger: NSObject {
     /**
     Removes an existing destination by identifier.
     */
-    open func removeDestination(_ identifier: String) {
+    @objc open func removeDestination(_ identifier: String) {
         destinations.removeValue(forKey: identifier)
     }
 
     /**
     Removes all destinations from this Logger instance.
     */
-    open func removeAllDestinations() {
+    @objc open func removeAllDestinations() {
         destinations.removeAll(keepingCapacity: false)
     }
 
     /**
     Lookup an existing destination by its identifier.
     */
-    open func destination(_ identifier: String) -> LogDestinationProtocol? {
+    @objc open func destination(_ identifier: String) -> LogDestinationProtocol? {
         return destinations[identifier]
     }
 
     /**
     Don't call this.  This is purely for interacting with the objective-c interface to this class.
     */
-    open func _objcLog(_ level: UInt, function: String, filename: String, line: UInt, message: String) {
+    @objc open func _objcLog(_ level: UInt, function: String, filename: String, line: UInt, message: String) {
         let detail = LogDetail()
         detail.date = Date()
         detail.message = message
