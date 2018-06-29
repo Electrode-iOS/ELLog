@@ -2,4 +2,5 @@ language: objective-c
 osx_image: xcode9.3
 
 script:
-   - xcodebuild -project ELLog.xcodeproj -scheme ELLog -sdk iphonesimulator test -destination 'platform=iOS Simulator,name=iPhone X,OS=11.1' CODE_SIGNING_REQUIRED=NO
+   - xcodebuild -project ELLog.xcodeproj -scheme ELLog -sdk iphonesimulator clean test -destination 'platform=iOS Simulator,name=iPhone X,OS=11.1' CODE_SIGNING_REQUIRED=NO
+   - xcodebuild -project ELLog.xcodeproj -scheme ELLog_static -sdk iphonesimulator clean build -destination 'platform=iOS Simulator,name=iPhone X,OS=11.1' CODE_SIGNING_REQUIRED=NO
