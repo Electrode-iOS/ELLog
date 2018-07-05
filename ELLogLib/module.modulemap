@@ -1,0 +1,9 @@
+module ELLog {
+    umbrella header "ELLog.h"    
+    export *
+}
+
+module ELLog.Swift {
+    header "ELLog-Swift.h"
+    requires objc
+}

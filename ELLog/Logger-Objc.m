@@ -7,7 +7,11 @@
 //
 
 #import "Logger-Objc.h"
-#import <ELLog/ELLog-Swift.h>
+#if defined(__has_include) && __has_include(<ELLog/ELLog-Swift.h>)
+    #import <ELLog/ELLog-Swift.h>
+#else
+    #import "ELLog-Swift.h"
+#endif
 
 @implementation ELLoggerObjc
 
