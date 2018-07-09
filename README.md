@@ -24,8 +24,8 @@ github "Electrode-iOS/ELLog"
 Install manually by adding `ELLog.xcodeproj` to your project and configuring your target to link `ELLog.framework` from `ELLog` target.
 
 There are two target that builds `ELLog.framework`.
-1. `ELLog`: Creates dynamicly linked `ELLog.framework.`
-2. `ELLog_static`: Creates staticly linked `ELLog.framework`.
+1. `ELLog`: Creates dynamically linked `ELLog.framework.`
+2. `ELLog_static`: Creates statically linked `ELLog.framework`.
 
 Both targets build the same product (`ELLog.framework`), thus linking the same app against both `ELLog` and `ELLog_static` should be avoided.
 
