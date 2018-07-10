@@ -1,3 +1,8 @@
+# [5.1.0](https://github.com/Electrode-iOS/ELLog/releases/tag/v5.1.0)
+
+- Add a target that builds a static framework for iOS platform.
+
+
 # [5.0.1](https://github.com/Electrode-iOS/ELLog/releases/tag/v5.0.1)
 
 - Update to Xode 9.3 recommended project settings
